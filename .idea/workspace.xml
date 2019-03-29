@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9906f13-504d-4a01-9d07-0af1f34b4826" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/formularios.php" beforeDir="false" afterPath="$PROJECT_DIR$/formularios.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cerrarIncidencia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enviarIncidencias.php" beforeDir="false" afterPath="$PROJECT_DIR$/enviarIncidencias.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/incidencia.php" beforeDir="false" afterPath="$PROJECT_DIR$/incidencia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/solicitudes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traducciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/traducciones.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,20 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/formularios.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+            <state relative-caret-position="367">
+              <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/incidencia.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="862">
-              <caret line="100" column="13" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
+            <state relative-caret-position="642">
+              <caret line="116" column="20" lean-forward="true" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="39" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
@@ -38,19 +37,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enviarIncidencias.php">
+        <entry file="file://$PROJECT_DIR$/cerrarIncidencia.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/traducciones.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="295" column="32" selection-start-line="295" selection-start-column="32" selection-end-line="295" selection-end-column="32" />
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -73,8 +63,10 @@
       <list>
         <option value="$PROJECT_DIR$/solicitudes.php" />
         <option value="$PROJECT_DIR$/traducciones.php" />
-        <option value="$PROJECT_DIR$/incidencia.php" />
         <option value="$PROJECT_DIR$/formularios.php" />
+        <option value="$PROJECT_DIR$/enviarIncidencias.php" />
+        <option value="$PROJECT_DIR$/cerrarIncidencia.php" />
+        <option value="$PROJECT_DIR$/incidencia.php" />
       </list>
     </option>
   </component>
@@ -130,12 +122,12 @@
       <option name="presentableId" value="Default" />
       <updated>1553790858001</updated>
       <workItem from="1553790860517" duration="2219000" />
-      <workItem from="1553849554325" duration="3262000" />
+      <workItem from="1553849554325" duration="4246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5481000" />
+    <option name="totallyTimeSpent" value="6465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -200,28 +192,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/incidencia.php">
+    <entry file="file://$PROJECT_DIR$/enviarIncidencias.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="862">
-          <caret line="100" column="13" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="615">
+          <caret line="41" column="62" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enviarIncidencias.php">
+    <entry file="file://$PROJECT_DIR$/cerrarIncidencia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/formularios.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+        <state relative-caret-position="367">
+          <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/incidencia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="116" column="20" lean-forward="true" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -84,17 +84,44 @@ function ver_incidencia()
             echo '</td>
                             <td>';
 
-            if( is_user_logged_in() ) {
-                $user = wp_get_current_user();
-                $roles = ( array ) $user->roles;
-                $role = $roles[0];
-                if($role == 'administrator'){
-                    echo '<button>' . obtenerTraduccion("cerrar") . '</button>';
+            if($result->estado == 1){
+                if( is_user_logged_in() ) {
+                    $user = wp_get_current_user();
+                    $roles = ( array ) $user->roles;
+                    $role = $roles[0];
+                    if($role == 'administrator'){
+                        echo '<button id="botonCerrar" onclick="cerrarIncidencia()">' . obtenerTraduccion("cerrar") . '</button>';
+                    }
                 }
             }
             echo '</td>
                         </tr>
-                    </table>';
+                    </table>
+                    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        function cerrarIncidencia(){
+            $("#botonCerrar").attr("disabled", true);
+            var formData = new FormData();
+            formData.append("id_incidencia", '.$result->id.')
+            $.ajax({
+                url: "/wp-content/plugins/solicitudes/cerrarIncidencia.php",
+                type: "POST",
+                data: formData,
+                dataType: "json",
+                mimeType: "multipart/form-data",
+                processData: false,
+                contentType: false,
+            }).done(function (data) {
+                    location.reload(); 
+                }
+            ).fail(function (data) {
+                     location.reload(); 
+                }
+            );
+        }
+    </script>';
         }
 
     } else {

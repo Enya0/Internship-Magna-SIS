@@ -39,7 +39,7 @@
 	}
 	elseif(camposRellenados()){
 		global $wpdb;
-		$wpdb->insert($wpdb->prefix . 'incidencia_solicitudes',array('email'=>$email,'nombre'=>$nombre, 'estado'=>'Abierta', 'notas'=>$descripcion, 'id_aula'=>$aula,'tipo'=>$problema),array('%s','%s','%s','%s','%s','%s'));
+		$wpdb->insert($wpdb->prefix . 'incidencia_solicitudes',array('email'=>$email,'nombre'=>$nombre, 'estado'=>1, 'notas'=>$descripcion, 'id_aula'=>$aula,'tipo'=>$problema),array('%s','%s','%s','%s','%s','%s'));
 		echo obtenerTraduccion("incidenciaOK");
 
 		mandarIncidencia($id, $email);
