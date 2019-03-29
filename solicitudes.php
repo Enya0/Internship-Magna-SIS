@@ -15,7 +15,7 @@ function solicitudes_activate(){
 	if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
 	     //table not in database. Create new table
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          email text NOT NULL,
@@ -28,7 +28,7 @@ function solicitudes_activate(){
 
 		 $table_name = $wpdb->prefix.'softwareSolicitud_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          id_solicitud mediumint(9) NOT NULL,
@@ -43,7 +43,7 @@ function solicitudes_activate(){
 
 	     $table_name = $wpdb->prefix.'motivo_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          texto text NOT NULL,
@@ -56,7 +56,7 @@ function solicitudes_activate(){
 
 	     $table_name = $wpdb->prefix.'aula_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	      	  id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          nombre text NOT NULL,
@@ -69,7 +69,7 @@ function solicitudes_activate(){
 
 	     $table_name = $wpdb->prefix.'so_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          nombre text NOT NULL,
@@ -80,7 +80,7 @@ function solicitudes_activate(){
 
 	     $table_name = $wpdb->prefix.'software_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          nombre text NOT NULL,
@@ -93,7 +93,7 @@ function solicitudes_activate(){
 
 	     $table_name = $wpdb->prefix.'hardware_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          nombre text NOT NULL,
@@ -111,7 +111,7 @@ function solicitudes_activate(){
 
 	     $table_name = $wpdb->prefix.'incidencia_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          email text NOT NULL,
@@ -127,7 +127,7 @@ function solicitudes_activate(){
 
 	     $table_name = $wpdb->prefix.'asignatura_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          nombre text NOT NULL,
@@ -140,7 +140,7 @@ function solicitudes_activate(){
 
 	     $table_name = $wpdb->prefix.'solicitud_aula_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 			  id_solicitud mediumint(9) NOT NULL,
@@ -152,7 +152,7 @@ function solicitudes_activate(){
 
 	     $table_name = $wpdb->prefix.'solicitud_so_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          id_solicitud mediumint(9) NOT NULL,
@@ -164,7 +164,7 @@ function solicitudes_activate(){
 
 	     $table_name = $wpdb->prefix.'software_aula_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          id_software mediumint(9) NOT NULL,
@@ -176,7 +176,7 @@ function solicitudes_activate(){
 
 	     $table_name = $wpdb->prefix.'software_asignatura_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          id_software mediumint(9) NOT NULL,
@@ -188,7 +188,7 @@ function solicitudes_activate(){
 
 	     $table_name = $wpdb->prefix.'software_so_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          id_software mediumint(9) NOT NULL,
@@ -200,7 +200,7 @@ function solicitudes_activate(){
 
 	     $table_name = $wpdb->prefix.'so_aula_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
-	 
+
 	     $sql = "CREATE TABLE $table_name (
 	          id mediumint(9) NOT NULL AUTO_INCREMENT,
 	          id_so mediumint(9) NOT NULL,
@@ -218,6 +218,8 @@ include( 'wp-content/plugins/solicitudes/formularios.php' );
 
 include( 'wp-content/plugins/solicitudes/incidencia.php' );
 
+include( 'wp-content/plugins/solicitudes/verIncidencias.php' );
+
 add_shortcode('form_incidencias', 'form_incidencias');
 
 add_shortcode('form_solicitud', 'form_solicitud');
@@ -228,5 +230,6 @@ add_shortcode('form_asignatura', 'form_asignatura');
 
 add_shortcode('ver_incidencia', 'ver_incidencia');
 
+add_shortcode('ver_incidencias', 'ver_incidencias');
 
 ?>

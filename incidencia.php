@@ -104,7 +104,7 @@ function ver_incidencia()
         function cerrarIncidencia(){
             $("#botonCerrar").attr("disabled", true);
             var formData = new FormData();
-            formData.append("id_incidencia", '.$result->id.')
+            formData.append("id_incidencia", '.$result->id.');
             $.ajax({
                 url: "/wp-content/plugins/solicitudes/cerrarIncidencia.php",
                 type: "POST",

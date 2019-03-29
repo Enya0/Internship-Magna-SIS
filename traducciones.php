@@ -300,6 +300,14 @@ function obtenerTraduccion($str)
                 return "No se ha introducido un identificador de incidencia.";
             }
             break;
+
+        case 'estado':
+            if ($idioma == $euskera) {
+                return "Egoera";
+            } else {
+                return "Estado";
+            }
+            break;
     }
 }
 
