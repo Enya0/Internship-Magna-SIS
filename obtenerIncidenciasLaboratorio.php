@@ -1,5 +1,5 @@
 <?php
-include('wp-content/plugins/solicitudes/traducciones.php');
+include('./traducciones.php');
 
 $path = $_SERVER['DOCUMENT_ROOT']; 
 include_once $path . '/wp-load.php';
@@ -11,7 +11,7 @@ if (isset($_POST['id_aula'])) {
 
     $results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'incidencia_solicitudes WHERE id_aula=' . $id_aula);
 
-    echo '<table>
+    echo '<br/><table>
             <tr>
                 <th>' . obtenerTraduccion("incidencia") . '</th>
                 <th>' . obtenerTraduccion("registradaPor") . '</th>
@@ -44,7 +44,7 @@ if (isset($_POST['id_aula'])) {
         } else {
             echo '<button style="background-color:#FF6347" disabled>' . obtenerTraduccion("cerrada") . '</button>';
         }
-        echo '</td><td>';
+        echo '</td>';
 
         if ($result->estado == 1) {
             if (is_user_logged_in()) {
@@ -52,11 +52,11 @@ if (isset($_POST['id_aula'])) {
                 $roles = ( array )$user->roles;
                 $role = $roles[0];
                 if ($role == 'administrator') {
-                    echo '<button id="botonCerrar" onclick="cerrarIncidencia(' . $result->id . ')">' . obtenerTraduccion("cerrar") . '</button>';
+                    echo '<td><button id="botonCerrar" onclick="cerrarIncidencia(' . $result->id . ')">' . obtenerTraduccion("cerrar") . '</button></td>';
                 }
             }
         }
-        echo '</td></tr>';
+        echo '</tr>';
     }
 
     echo ' </table><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -76,10 +76,10 @@ if (isset($_POST['id_aula'])) {
                 processData: false,
                 contentType: false,
             }).done(function (data) {
-                    location.reload(); 
+                    cargarIncidencias();
                 }
             ).fail(function (data) {
-                     location.reload(); 
+                    cargarIncidencias();
                 }
             );
         }
