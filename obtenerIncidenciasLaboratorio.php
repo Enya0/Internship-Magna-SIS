@@ -1,4 +1,8 @@
 <?php
+include('wp-content/plugins/solicitudes/traducciones.php');
+
+$path = $_SERVER['DOCUMENT_ROOT']; 
+include_once $path . '/wp-load.php';
 
 if (isset($_POST['id_aula'])) {
     $id_aula = $_POST['id_aula'];
@@ -17,7 +21,6 @@ if (isset($_POST['id_aula'])) {
             </tr>';
     foreach ($results as $result) {
 
-        $idioma = get_locale();
         echo '<tr>
                     <td>';
 
