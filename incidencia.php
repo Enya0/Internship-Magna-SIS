@@ -1,17 +1,16 @@
 <?php
 
-
 function ver_incidencia()
 {
-    include('wp-content/plugins/solicitudes/traducciones.php');
-
-    if (isset($_POST['id'])) {
-        $id_incidencia = $_POST['id'];
+    if (isset($_GET['id'])) {
+        $id_incidencia = $_GET['id'];
 
         global $wpdb;
 
         $results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'incidencia_solicitudes WHERE id=' . $id_incidencia);
+
         foreach ($results as $result) {
+
             $idioma = get_locale();
             echo '<table>
                         <tr>
@@ -32,23 +31,24 @@ function ver_incidencia()
                             <td>
                                 ';
 
-            echo $result->nombre . ' [' . $result->email . ']';
+            echo $result->nombre . ' &lt;' . $result->email . '&gt;';
 
             echo '
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                ' . obtenerTraduccion("aula") . ':
+                                ' . obtenerTraduccion("nombreLabAula") . ':
                             </td>
                             <td>';
 
             $results_aula = $wpdb->get_results('SELECT nombre,nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes WHERE id=' . $result->id_aula);
+
             foreach ($results_aula as $result_aula) {
                 if ($idioma == "eu_ES") {
-                    $result_aula->nombre_eus;
+                    echo $result_aula->nombre_eus;
                 } else {
-                    $result_aula->nombre;
+                    echo $result_aula->nombre;
                 }
             }
 
@@ -60,7 +60,7 @@ function ver_incidencia()
                             </td>
                             <td>';
 
-            $result->tipo;
+            echo $result->tipo;
 
             echo '</td>
                         </tr>
@@ -70,7 +70,7 @@ function ver_incidencia()
                             </td>
                             <td>';
 
-            $result->notas;
+            echo $result->notas;
 
             echo '</td>
                         </tr>
@@ -84,14 +84,21 @@ function ver_incidencia()
             echo '</td>
                             <td>';
 
+            if( is_user_logged_in() ) {
+                $user = wp_get_current_user();
+                $roles = ( array ) $user->roles;
+                $role = $roles[0];
+                if($role == 'administrator'){
+                    echo '<button>' . obtenerTraduccion("cerrar") . '</button>';
+                }
+            }
             echo '</td>
                         </tr>
                     </table>';
         }
 
     } else {
-        echo "No se ha introducido un identificador de incidencia.";
+        echo obtenerTraduccion("verIncidenciaError");
     }
 }
-
 ?>

@@ -1,6 +1,5 @@
 <?php
 
-include('wp-content/plugins/solicitudes/traducciones.php');
 
 function form_incidencias(){
     global $wpdb;
@@ -48,8 +47,8 @@ function form_incidencias(){
             </td>
             <td>
                 <select name="problema">
-                    <option value="hardware">Hardware</option>
-                    <option value="software">Software</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Software">Software</option>
                 </select>
             </td>
         </tr>

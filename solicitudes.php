@@ -7,6 +7,8 @@
 * Author URI: http://magnasis.com/
 **/
 
+include('wp-content/plugins/solicitudes/traducciones.php');
+
 function solicitudes_activate(){
 	global $wpdb;
 	$table_name = $wpdb->prefix.'solicitud_solicitudes';

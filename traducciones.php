@@ -292,6 +292,14 @@ function obtenerTraduccion($str)
                 return "Cerrar";
             }
             break;
+
+        case 'verIncidenciaError':
+            if ($idioma == $euskera) {
+                return "Intzidentziaren identifikatzailea ez da sartu.";
+            } else {
+                return "No se ha introducido un identificador de incidencia.";
+            }
+            break;
     }
 }
 
