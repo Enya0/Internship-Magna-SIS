@@ -224,7 +224,7 @@ add_shortcode('form_so', 'form_so');
 
 add_shortcode('form_asignatura', 'form_asignatura');
 
-//add_shortcode('verIncidencia', 'verIncidencia');
+add_shortcode('ver_incidencia', 'ver_incidencia');
 
 
 ?>
