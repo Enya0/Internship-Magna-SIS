@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9906f13-504d-4a01-9d07-0af1f34b4826" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/obtenerIncidenciasLaboratorio.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/verIncidencias.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incidencia.php" beforeDir="false" afterPath="$PROJECT_DIR$/incidencia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/solicitudes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traducciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/traducciones.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/verIncidencias.php" beforeDir="false" afterPath="$PROJECT_DIR$/verIncidencias.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/obtenerIncidenciasLaboratorio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+            <state relative-caret-position="1275">
+              <caret line="85" column="46" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="46" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
@@ -52,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/verIncidencias.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+            <state relative-caret-position="165">
+              <caret line="11" column="81" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -162,12 +157,12 @@
       <option name="presentableId" value="Default" />
       <updated>1553790858001</updated>
       <workItem from="1553790860517" duration="2219000" />
-      <workItem from="1553849554325" duration="5926000" />
+      <workItem from="1553849554325" duration="6324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8145000" />
+    <option name="totallyTimeSpent" value="8543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -218,13 +213,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enviarIncidencias.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="62" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cerrarIncidencia.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -246,6 +234,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/solicitudes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="232" column="49" selection-start-line="232" selection-start-column="49" selection-end-line="232" selection-end-column="49" />
+          <folding>
+            <element signature="e#6#128#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/verIncidencias.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="81" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enviarIncidencias.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="12" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/incidencia.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
@@ -259,29 +271,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/obtenerIncidenciasLaboratorio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+        <state relative-caret-position="1275">
+          <caret line="85" column="46" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solicitudes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="232" column="49" selection-start-line="232" selection-start-column="49" selection-end-line="232" selection-end-column="49" />
-          <folding>
-            <element signature="e#6#128#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/verIncidencias.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
         </state>
       </provider>
     </entry>

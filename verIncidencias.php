@@ -9,7 +9,8 @@ function ver_incidencias()
 
     echo obtenerTraduccion("nombreLabAula") . ': &nbsp;&nbsp;&nbsp;';
 
-    echo ' <select id="id_aula" onchange="cargarIncidencias()">';
+    echo ' <select id="id_aula" onchange="cargarIncidencias()"><option value="0"></option>';
+
 
     foreach ($resultsLab as $result) {
         if ($idioma == "eu_ES") {
