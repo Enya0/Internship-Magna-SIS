@@ -15,7 +15,7 @@
 			echo '<table>
 			        <tr>
 			            <td>
-			                '.obtenerTraduccion("Incidencia").':  
+			                '.obtenerTraduccion("incidencia").':  
 			            </td>
 			            <td width="70%">';
 
@@ -31,7 +31,7 @@
 			            <td>
 			                '; 
 
-			                echo $result->nombre . ' <' . $result->email . '>'; 
+			                echo $result->nombre . ' [' . $result->email . ']'; 
 
 			                echo'
 			            </td>
