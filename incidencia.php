@@ -2,7 +2,7 @@
 
 	include('wp-content/plugins/solicitudes/traducciones.php');
 
-	function (){
+	function verIncidencia(){
 
 		if (isset($_POST['id'])){
 			$id_incidencia = $_POST['id'];
@@ -85,7 +85,7 @@
 			                
 			            echo'</td>
 			        </tr>
-			    </table>'
+			    </table>';
 			}
 
 		}

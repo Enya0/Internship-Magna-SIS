@@ -214,6 +214,8 @@ register_activation_hook( __FILE__, 'solicitudes_activate' );
 
 include( 'wp-content/plugins/solicitudes/formularios.php' );
 
+include( 'wp-content/plugins/solicitudes/incidencia.php' );
+
 add_shortcode('form_incidencias', 'form_incidencias');
 
 add_shortcode('form_solicitud', 'form_solicitud');
@@ -221,6 +223,8 @@ add_shortcode('form_solicitud', 'form_solicitud');
 add_shortcode('form_so', 'form_so');
 
 add_shortcode('form_asignatura', 'form_asignatura');
+
+add_shortcode('verIncidencia', 'verIncidencia');
 
 
 ?>
