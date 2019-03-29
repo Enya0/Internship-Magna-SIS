@@ -1,97 +1,97 @@
 <?php
 
-	include('wp-content/plugins/solicitudes/traducciones.php');
+include('wp-content/plugins/solicitudes/traducciones.php');
 
-	function verIncidencia(){
+function verIncidencia()
+{
 
-		if (isset($_POST['id'])){
-			$id_incidencia = $_POST['id'];
+    if (isset($_POST['id'])) {
+        $id_incidencia = $_POST['id'];
 
-			global $wpdb;
+        global $wpdb;
 
-			$results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'incidencia_solicitudes WHERE id = $id_incidencia');
-			foreach($results as $result) {
-			$idioma = get_locale();
-			echo '<table>
+        $results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'incidencia_solicitudes WHERE id='.$id_incidencia);
+        foreach ($results as $result) {
+            $idioma = get_locale();
+            echo '<table>
 			        <tr>
 			            <td>
-			                '.obtenerTraduccion("incidencia").':  
+			                ' . obtenerTraduccion("incidencia") . ':  
 			            </td>
 			            <td width="70%">';
 
-                			echo $id_incidencia;
+            echo $id_incidencia;
 
-			                echo'
+            echo '
 			            </td>
 			        </tr>
 			        <tr>
 			            <td>
-			                '.obtenerTraduccion("registradaPor").':
+			                ' . obtenerTraduccion("registradaPor") . ':
 			            </td>
 			            <td>
-			                '; 
+			                ';
 
-			                echo $result->nombre . ' [' . $result->email . ']'; 
+            echo $result->nombre . ' [' . $result->email . ']';
 
-			                echo'
+            echo '
 			            </td>
 			        </tr>
 			        <tr>
 			            <td>
-			                '.obtenerTraduccion("aula").': 
+			                ' . obtenerTraduccion("aula") . ': 
 			            </td>
 			            <td>';
 
-			            	$results_aula = $wpdb->get_results('SELECT nombre,nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes WHERE id = $result->id_aula');
-			            	foreach($results_aula as $result_aula) {
-				            	if($idioma == "eu_ES"){
-				            		$result_aula->nombre_eus;
-				            	}else{
-				            		$result_aula->nombre;
-				            	}
-				            }
+            $results_aula = $wpdb->get_results('SELECT nombre,nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes WHERE id='.$result->id_aula);
+            foreach ($results_aula as $result_aula) {
+                if ($idioma == "eu_ES") {
+                    $result_aula->nombre_eus;
+                } else {
+                    $result_aula->nombre;
+                }
+            }
 
-			                echo '</td>
+            echo '</td>
 			        </tr>
 			        <tr>
 			            <td>
-			                '.obtenerTraduccion("tipoProblema").': 
+			                ' . obtenerTraduccion("tipoProblema") . ': 
 			            </td>
 			            <td>';
 
-			            	$result->tipo;
-			            	
-			            echo '</td>
+            $result->tipo;
+
+            echo '</td>
 			        </tr>
 			        <tr>
 			            <td>
-			                '.obtenerTraduccion("mensaje").': 
+			                ' . obtenerTraduccion("mensaje") . ': 
 			            </td>
 			            <td>';
 
-			                $result->notas;
+            $result->notas;
 
-			            echo'</td>
+            echo '</td>
 			        </tr>
 			        <tr>
 			            <td>';
-			                if ($result->estado == 1){
-			                	echo '<button style="background-color:#90EE90" disabled>' . obtenerTraduccion("abierta") . '</button>';
-			                }else{
-			                	echo '<button style="background-color:#FF6347" disabled>' . obtenerTraduccion("cerrada") . '</button>';
-			                }
-			            echo'</td>
+            if ($result->estado == 1) {
+                echo '<button style="background-color:#90EE90" disabled>' . obtenerTraduccion("abierta") . '</button>';
+            } else {
+                echo '<button style="background-color:#FF6347" disabled>' . obtenerTraduccion("cerrada") . '</button>';
+            }
+            echo '</td>
 			            <td>';
-			                
-			            echo'</td>
+
+            echo '</td>
 			        </tr>
 			    </table>';
-			}
+        }
 
-		}
-		else{
-			echo "No se ha introducido un identificador de incidencia.";
-		}
-	}
+    } else {
+        echo "No se ha introducido un identificador de incidencia.";
+    }
+}
 
 ?>
