@@ -142,6 +142,14 @@ function obtenerTraduccion($str)
             }
             break;
 
+        case 'nSoftware':
+            if ($idioma == $euskera) {
+                return "Zenbat programa nahi dituzu eskatu?";
+            } else {
+                return "¿Cuántos programas quieres pedir?";
+            }
+            break;
+
         case 'insertarSistOp':
             if ($idioma == $euskera) {
                 return "Sistema eragilea sartu.";
@@ -187,6 +195,30 @@ function obtenerTraduccion($str)
                 return "Mesedez, deskribapena sartu.";
             } else {
                 return "Por favor, introduzca una descripción.";
+            }
+            break;
+
+        case 'erAulaValida':
+            if ($idioma == $euskera) {
+                return "Mesedez, gutxienez gela bat aukeratu.";
+            } else {
+                return "Por favor, elija al menos un aula.";
+            }
+            break;
+
+        case 'erSistemaOperativoValido':
+            if ($idioma == $euskera) {
+                return "Mesedez, gutxienez sistema eragile bat aukeratu.";
+            } else {
+                return "Por favor, elija al menos un sistema operativo.";
+            }
+            break;
+
+        case 'erNSoftwareValido':
+            if ($idioma == $euskera) {
+                return "Mesedez, programa zenbaki balido bat sartu.";
+            } else {
+                return "Por favor, introduzca un número de programas válido.";
             }
             break;
 

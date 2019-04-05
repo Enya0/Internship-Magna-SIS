@@ -111,7 +111,7 @@ function form_solicitud(){
     $results = $wpdb->get_results('SELECT id, nombre, nombre_eus FROM ' . $wpdb->prefix . 'asignatura_solicitudes');
     $resultsLab = $wpdb->get_results('SELECT id, nombre, nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes');
     $resultsSO = $wpdb->get_results('SELECT id, nombre FROM ' . $wpdb->prefix . 'so_solicitudes');
-    echo '<form id="fsolicitud" name="fsolicitud" action="" method="post" enctype="multipart/form-data">
+    echo '<div id="formulario"><form id="fsolicitud" name="fsolicitud" action="" method="post" enctype="multipart/form-data">
     <table>
         <tr>
             <td>
@@ -158,35 +158,20 @@ function form_solicitud(){
             <td>';
 
                 foreach($resultsSO as $resultSO) {
-                    echo '<input type="checkbox" name="sistOp" value="' . $resultSO->id . '">&nbsp;' . $resultSO->nombre . '</imput><br/>';
+                    echo '<input type="checkbox" name="sistOp[]" value="' . $resultSO->id . '">&nbsp;' . $resultSO->nombre . '</imput><br/>';
                 }
 
                 echo'</td>
         </tr>
         <tr>
             <td>
-                '.obtenerTraduccion("nombrePrograma").'*: 
+                '.obtenerTraduccion("nSoftware").'*: 
             </td>
             <td>
-                <input type="text" id="programa" name="programa" class="texto-form">
+                <input type="number" id="nSoftware" name="nSoftware" class="texto-form">
             </td>
         </tr>
-        <tr>
-            <td>
-                '.obtenerTraduccion("version").'*: 
-            </td>
-            <td>
-                <input type="text" id="version" name="version" class="texto-form">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                '.obtenerTraduccion("infoAdicional").'*: 
-            </td>
-            <td>
-                <textarea rows = "3" id="descrip" name="descrip" class="texto-form"></textarea>
-            </td>
-        </tr>
+
         <tr>
             <td>
                 <input type="button" id="send" name="send" value="'.obtenerTraduccion("enviar").'" onclick="enviarSolicitud()">
@@ -196,7 +181,7 @@ function form_solicitud(){
             </td>
         </tr>
     </table>
-    </form>
+    </form></div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -208,7 +193,7 @@ function form_solicitud(){
             $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
             
             $.ajax({
-                url: "/wp-content/plugins/solicitudes/enviarSolicitudes.php",
+                url: "/wp-content/plugins/solicitudes/siguienteSolicitudes.php",
                 type: "POST",
                 data: new FormData(solicitud),
                 dataType: "json",
@@ -217,11 +202,9 @@ function form_solicitud(){
                 contentType: false,
             }).done(function (data) {
                     $("#mensaje").html(data["responseText"]);
-                    $("#fsolicitud")[0].reset();
                 }
             ).fail(function (data) {
                     $("#mensaje").html(data["responseText"]);
-                    $("#fsolicitud")[0].reset();
                 }
             );
         }
