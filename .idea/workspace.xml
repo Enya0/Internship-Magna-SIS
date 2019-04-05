@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9906f13-504d-4a01-9d07-0af1f34b4826" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/formularios.php" beforeDir="false" afterPath="$PROJECT_DIR$/formularios.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mandarIncidencias.php" beforeDir="false" afterPath="$PROJECT_DIR$/mandarIncidencias.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obtenerIncidenciasLaboratorio.php" beforeDir="false" afterPath="$PROJECT_DIR$/obtenerIncidenciasLaboratorio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/loading.gif" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/formularios.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="203" column="75" selection-start-line="203" selection-start-column="75" selection-end-line="203" selection-end-column="75" />
+            <state relative-caret-position="405">
+              <caret line="203" column="101" selection-start-line="203" selection-start-column="101" selection-end-line="203" selection-end-column="101" />
             </state>
           </provider>
         </entry>
@@ -121,12 +119,12 @@
       <workItem from="1553862063526" duration="1100000" />
       <workItem from="1554451198858" duration="524000" />
       <workItem from="1554451901887" duration="22000" />
-      <workItem from="1554451977990" duration="534000" />
+      <workItem from="1554451977990" duration="1051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10947000" />
+    <option name="totallyTimeSpent" value="11464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="840" y="23" width="840" height="954" extended-state="0" />
@@ -246,8 +244,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/formularios.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="203" column="75" selection-start-line="203" selection-start-column="75" selection-end-line="203" selection-end-column="75" />
+        <state relative-caret-position="405">
+          <caret line="203" column="101" selection-start-line="203" selection-start-column="101" selection-end-line="203" selection-end-column="101" />
         </state>
       </provider>
     </entry>

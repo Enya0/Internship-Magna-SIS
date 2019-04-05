@@ -77,7 +77,8 @@ function form_incidencias(){
         function enviarIncidencia(){
 
             var incidencia = $("#fincidencias").get(0);
-            
+            $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
+
             $.ajax({
                 url: "/wp-content/plugins/solicitudes/enviarIncidencias.php",
                 type: "POST",
@@ -201,7 +202,7 @@ function form_solicitud(){
         function enviarSolicitud(){
 
             var solicitud = $("#fsolicitud").get(0);
-            $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\'>");
+            $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
             
             $.ajax({
                 url: "/wp-content/plugins/solicitudes/enviarSolicitudes.php",
@@ -254,6 +255,7 @@ function form_so(){
         function insertaSO(){
 
             var nombre = $("#fso").get(0);
+            $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
 
             $.ajax({
                 url: "/wp-content/plugins/solicitudes/insertarSO.php",
@@ -327,6 +329,7 @@ function form_asignatura(){
         function insertaAsignatura(){
 
             var nombre = $("#fasig").get(0);
+            $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
 
             $.ajax({
                 url: "/wp-content/plugins/solicitudes/insertarAsignatura.php",
