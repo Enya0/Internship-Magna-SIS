@@ -1,6 +1,5 @@
 <?php
 
-
 function form_incidencias(){
     global $wpdb;
     $results = $wpdb->get_results('SELECT id, nombre, nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes');
@@ -138,10 +137,10 @@ function form_solicitud(){
                 foreach($resultsLab as $resultLab) {
                     if($idioma == "eu_ES"){
                         //echo '<option value="' . $resultLab->id . '">' . $resultLab->nombre_eus . '</option>';
-                        echo '<input type="checkbox" name="aula[]" value="' . $resultLab->id . '">' . $resultLab->nombre_eus ;
+                        echo '<input type="checkbox" name="aula[]" value="' . $resultLab->id . '">&nbsp;' . $resultLab->nombre_eus . '&nbsp;</input>' ;
                     }else{
                         //echo '<option value="' . $resultLab->id . '">' . $resultLab->nombre . '</option>';
-                        echo '<input type="checkbox" name="aula[]" value="' . $resultLab->id . '">' . $resultLab->nombre;
+                        echo '<input type="checkbox" name="aula[]" value="' . $resultLab->id . '">&nbsp;' . $resultLab->nombre. '&nbsp;</input>' ;
                     }
                 }
 
@@ -152,15 +151,13 @@ function form_solicitud(){
             <td>
                 '.obtenerTraduccion("sistemaOperativo").'*: 
             </td>
-            <td>
-                <select name="sistOp">';
+            <td>';
 
                 foreach($resultsSO as $resultSO) {
-                    echo '<option value="' . $resultSO->id . '">' . $resultSO->nombre . '</option>';
+                    echo '<input type="checkbox" name="sistOp" value="' . $resultSO->id . '">&nbsp;' . $resultSO->nombre . '</imput><br/>';
                 }
 
-                echo'</select>
-            </td>
+                echo'</td>
         </tr>
         <tr>
             <td>
@@ -204,6 +201,7 @@ function form_solicitud(){
         function enviarSolicitud(){
 
             var solicitud = $("#fsolicitud").get(0);
+            $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\'>");
             
             $.ajax({
                 url: "/wp-content/plugins/solicitudes/enviarSolicitudes.php",

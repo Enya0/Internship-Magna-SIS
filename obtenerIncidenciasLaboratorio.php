@@ -9,7 +9,7 @@ if (isset($_POST['id_aula'])) {
 
     global $wpdb;
 
-    $results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'incidencia_solicitudes WHERE id_aula=' . $id_aula);
+    $results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'incidencia_solicitudes WHERE id_aula=' . $id_aula . ' ORDER BY (id) DESC');
 
     echo '<br/><table>
             <tr>
