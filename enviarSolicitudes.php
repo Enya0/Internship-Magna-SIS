@@ -1,6 +1,6 @@
 <?php
 
-	include('wp-content/plugins/solicitudes/traducciones.php');
+	include('./traducciones.php');
 
 	$path = $_SERVER['DOCUMENT_ROOT']; 
 	include_once $path . '/wp-load.php';

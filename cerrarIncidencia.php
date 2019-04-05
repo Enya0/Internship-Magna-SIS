@@ -2,6 +2,7 @@
 
 $path = $_SERVER['DOCUMENT_ROOT'];
 include_once $path . '/wp-load.php';
+global $wpdb;
 
 $id_incidencia = $_POST['id_incidencia'];
 $table = $wpdb->prefix . 'incidencia_solicitudes';
