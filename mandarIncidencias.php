@@ -4,7 +4,6 @@
         $path = $_SERVER['DOCUMENT_ROOT'];
         include_once $path . '/wp-load.php';
 
-
 		$to = "enyamanina@gmail.com";
 		$subject = "Notificación de incidencia";
 

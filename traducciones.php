@@ -2,6 +2,7 @@
 
 function obtenerTraduccion($str)
 {
+
     $idioma = get_locale();
 
     $euskera = 'eu';

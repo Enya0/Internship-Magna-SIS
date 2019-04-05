@@ -2,6 +2,7 @@
 
 function form_incidencias(){
     global $wpdb;
+    $euskera = 'eu';
     $results = $wpdb->get_results('SELECT id, nombre, nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes');
     echo '<form id="fincidencias" name="fincidencias" action="" method="post" enctype="multipart/form-data">
     <table>
@@ -30,7 +31,7 @@ function form_incidencias(){
 
                 foreach($results as $result) {
                     $idioma = get_locale();
-                    if($idioma == "eu_ES"){
+                    if($idioma == $euskera){
                         echo '<option value="' . $result->id . '">' . $result->nombre_eus . '</option>';
                     }else{
                         echo '<option value="' . $result->id . '">' . $result->nombre . '</option>';
@@ -88,10 +89,12 @@ function form_incidencias(){
                 processData: false,
                 contentType: false,
             }).done(function (data) {
+                console.log(data);
                     $("#mensaje").html(data["responseText"]);
                     $("#fincidencias")[0].reset();
                 }
             ).fail(function (data) {
+                console.log(data);
                     $("#mensaje").html(data["responseText"]);
                     $("#fincidencias")[0].reset();
                 }
@@ -103,7 +106,7 @@ function form_incidencias(){
 
 function form_solicitud(){
     $idioma = get_locale();
-
+    $euskera = 'eu';
     global $wpdb;
     $results = $wpdb->get_results('SELECT id, nombre, nombre_eus FROM ' . $wpdb->prefix . 'asignatura_solicitudes');
     $resultsLab = $wpdb->get_results('SELECT id, nombre, nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes');
@@ -118,7 +121,7 @@ function form_solicitud(){
                 <select name="asig">';
 
                 foreach($results as $result) {
-                    if($idioma == "eu_ES"){
+                    if($idioma == $euskera){
                         echo '<option value="' . $result->id . '">' . $result->nombre_eus . '</option>';
                     }else{
                         echo '<option value="' . $result->id . '">' . $result->nombre . '</option>';
@@ -136,7 +139,7 @@ function form_solicitud(){
                 '; //<select name="aula">
 
                 foreach($resultsLab as $resultLab) {
-                    if($idioma == "eu_ES"){
+                    if($idioma == $euskera){
                         //echo '<option value="' . $resultLab->id . '">' . $resultLab->nombre_eus . '</option>';
                         echo '<input type="checkbox" name="aula[]" value="' . $resultLab->id . '">&nbsp;' . $resultLab->nombre_eus . '&nbsp;</input>' ;
                     }else{
