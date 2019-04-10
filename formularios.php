@@ -89,15 +89,13 @@ function form_incidencias(){
                 processData: false,
                 contentType: false,
             }).done(function (data) {
-                console.log(data);
                     $("#mensaje").html(data["responseText"]);
                     $("#fincidencias")[0].reset();
-                }
+            }
             ).fail(function (data) {
-                console.log(data);
                     $("#mensaje").html(data["responseText"]);
                     $("#fincidencias")[0].reset();
-                }
+            }
             );
         }
     </script>';
@@ -106,12 +104,16 @@ function form_incidencias(){
 
 function form_solicitud(){
     $idioma = get_locale();
+    global $current_user;
+    wp_get_current_user();
     $euskera = 'eu';
     global $wpdb;
     $results = $wpdb->get_results('SELECT id, nombre, nombre_eus FROM ' . $wpdb->prefix . 'asignatura_solicitudes');
     $resultsLab = $wpdb->get_results('SELECT id, nombre, nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes');
     $resultsSO = $wpdb->get_results('SELECT id, nombre FROM ' . $wpdb->prefix . 'so_solicitudes');
     echo '<div id="formulario"><form id="fsolicitud" name="fsolicitud" action="" method="post" enctype="multipart/form-data">
+    <input type="text" value="'.$current_user->user_email.'" name="email" style="visibility: hidden;"/>
+
     <table>
         <tr>
             <td>
@@ -174,7 +176,7 @@ function form_solicitud(){
 
         <tr>
             <td>
-                <input type="button" id="send" name="send" value="'.obtenerTraduccion("enviar").'" onclick="enviarSolicitud()">
+                <input type="button" id="send" name="send" value="'.obtenerTraduccion("enviar").'" onclick="siguienteSolicitud()">
             </td>
             <td>
                 <p id="mensaje"></p>
@@ -187,7 +189,7 @@ function form_solicitud(){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript">
 
-        function enviarSolicitud(){
+        function siguienteSolicitud(){
 
             var solicitud = $("#fsolicitud").get(0);
             $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
@@ -201,11 +203,57 @@ function form_solicitud(){
                 processData: false,
                 contentType: false,
             }).done(function (data) {
-                    $("#mensaje").html(data["responseText"]);
+                console.log(data);
+                if(data.status == "0"){
+                    $("#mensaje").html(data.msg);
+                    $("#fsolicitud")[0].reset();
+                }else{
+                    $("#formulario").html(data.msg);
                 }
+            }
             ).fail(function (data) {
-                    $("#mensaje").html(data["responseText"]);
+                console.log(data);
+                if(data.status == "0"){
+                    $("#mensaje").html(data.msg);
+                    $("#fsolicitud")[0].reset();
+                }else{
+                    $("#formulario").html(data.msg);
                 }
+            }
+            );
+        }
+        
+        function enviarSolicitud(){
+
+            var solicitud = $("#fprogramas").get(0);
+            $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
+            
+            $.ajax({
+                url: "/wp-content/plugins/solicitudes/enviarSolicitudes.php",
+                type: "POST",
+                data: new FormData(solicitud),
+                dataType: "json",
+                mimeType: "multipart/form-data",
+                processData: false,
+                contentType: false,
+            }).done(function (data) {
+                console.log(data);
+                if(data.status == "0"){
+                    $("#mensaje").html(data.msg);
+                    //$("#fsolicitud")[0].reset();
+                }else{
+                    $("#formulario").html(data.msg);
+                }
+            }
+            ).fail(function (data) {
+                console.log(data);
+                if(data.status == "0"){
+                    $("#mensaje").html(data.msg);
+                    //$("#fsolicitud")[0].reset();
+                }else{
+                    $("#formulario").html(data.msg);
+                }
+            }
             );
         }
     </script>';

@@ -6,45 +6,42 @@
 	include_once $path . '/wp-load.php';
 
 	$asignatura = $_POST['asig'];
-	$aula = $_POST['aula'];
-	$sistemaOperativo = $_POST['sistOp'];
-	$programa = $_POST['programa'];
-	$version = $_POST['version'];
-	$descripcion = $_POST['descrip'];
+	$aula = $_POST['aula']; // separadas por comas
+	$sistemaOperativo = $_POST['sistOp']; // separadas por comas
+    $nSoftware = $_POST['nSoftware'];
+    $email = $_POST['email'];
 
-	function programaValido($str){
-		return ($str != '');
-	}
+    $programas = [];
+    $versiones = [];
+    $descripciones = [];
 
-	function versionValida($str){
-		return ($str != '');
-	}
 
-	function descripcionValida($str){
-		return ($str != '');
-	}
+    function campoValido($str){
+        return ($str != '');
+    }
 
-	function camposRellenados(){
-		return (isset($_POST['programa']) && isset($_POST['version']) && isset($_POST['descrip']));
-	}
+    for($i = 0; $i < $nSoftware; $i++) {
+        if(isset($_POST['programa' . $i]) && isset($_POST['version' . $i]) && isset($_POST['descrip' . $i])
+            && campoValido($_POST['programa' . $i]) && campoValido($_POST['version' . $i])
+            && campoValido($_POST['descrip' . $i])){
 
-	if (!programaValido($email)){
-		echo obtenerTraduccion("erProgramaValido");
-	}
-	elseif (!versionValida($nombre)){
-		echo obtenerTraduccion("erVersionValida");
-	}
-	elseif (!descripcionValida($descripcion)){
-		echo obtenerTraduccion("erDescripValida");
-	}
-	elseif(camposRellenados()){
-		global $wpdb;
-		$wpdb->insert($wpdb->prefix . 'solicitud_solicitudes',array('email'=>$email,'nombre'=>$nombre, 'estado'=>'Abierta', 'notas'=>$descripcion, 'id_aula'=>$aula,'tipo'=>$problema),array('%s','%s','%s','%s','%s','%s'));
-		echo obtenerTraduccion("solicitudOK");
-	}
-	else{
-		echo obtenerTraduccion("solicitudNoOK");
-	}
+            array_push($programas, $_POST['programa' . $i]);
+            array_push($versiones, $_POST['version' . $i]);
+            array_push($descripciones, $_POST['descrip' . $i]);
+        }else{
+            $return = array('status'=>0, 'msg'=>"Error software: " . ($i+1));
+            echo json_encode($return);
+            return 0;
+        }
+
+    }
+
+
+    global $wpdb;
+    $wpdb->insert($wpdb->prefix . 'solicitud_solicitudes',array('email'=>$email,'id_asignatura'=>$asignatura),array('%s','%s'));
+
+    $return = array('status'=>1, 'msg'=>obtenerTraduccion("solicitudOK"));
+    echo json_encode($return);
 
 	return 0;
 
