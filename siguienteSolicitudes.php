@@ -27,8 +27,8 @@
 	    $msg = '<form id="fprogramas" name="fprogramas" action="" method="post" enctype="multipart/form-data">
         <input type="text" value="'.$asignatura.'" name="asig" style="visibility: hidden;"/>
                 <input type="text" value="'.$_POST['email'].'" name="email" style="visibility: hidden;"/>
-        <input type="text" value="'.implode(",",$aula).'" name="aula[]" style="visibility: hidden;"/>
-        <input type="text" value="'.implode(",",$sistemaOperativo).'" name="sistOp[]" style="visibility: hidden;"/>
+        <input type="text" value="'.implode(",",$aula).'" name="aula" style="visibility: hidden;"/>
+        <input type="text" value="'.implode(",",$sistemaOperativo).'" name="sistOp" style="visibility: hidden;"/>
         <input type="text" value="'.$nSoftware.'" name="nSoftware" style="visibility: hidden;"/>';
 
 	    for($i = 0; $i < $nSoftware; $i++){

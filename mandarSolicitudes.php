@@ -27,7 +27,7 @@
 		mail($to,$subject,$message,$headers);
 
 
-		$to = $email;
+		$to = "julen.miner@magnasis.com";
 		$subject = "Confirmación de solicitud";
 
 		$message = "
