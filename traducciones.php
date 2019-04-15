@@ -341,6 +341,54 @@ function obtenerTraduccion($str)
                 return "Estado";
             }
             break;
+
+        case 'registrada':
+            if ($idioma == $euskera) {
+                return "Registrada";
+            } else {
+                return "Erregistratua";
+            }
+            break;
+
+        case 'descartada':
+            if ($idioma == $euskera) {
+                return "Descartada";
+            } else {
+                return "Ezeztatuta";
+            }
+            break;
+
+        case 'reabierta':
+            if ($idioma == $euskera) {
+                return "Reabierta";
+            } else {
+                return "Berrirekia";
+            }
+            break;
+
+        case 'pendiente':
+            if ($idioma == $euskera) {
+                return "Pendiente de validación";
+            } else {
+                return "Balioztatze zain";
+            }
+            break;
+
+        case 'validada':
+            if ($idioma == $euskera) {
+                return "Validada";
+            } else {
+                return "Balioztatuta";
+            }
+            break;
+
+        case 'desplegada':
+            if ($idioma == $euskera) {
+                return "Desplegada";
+            } else {
+                return "Zabalduta";
+            }
+            break;
     }
 }
 
