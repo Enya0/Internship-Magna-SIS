@@ -61,7 +61,7 @@ function ver_solicitud()
             $nombres_so = [];
 
             foreach ($results_so as $result_so) {
-                array_push($nombres_aulas, $result_so->nombre);
+                array_push($nombres_so, $result_so->nombre);
             }
 
             $results_software = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'softwareSolicitud_solicitudes WHERE id_solicitud=' . $id_solicitud);
@@ -72,7 +72,7 @@ function ver_solicitud()
                             <td>
                                 ' . obtenerTraduccion("nombrePrograma") . ':
                             </td>
-                            <td>';
+                            <td width="70%">';
 
                 echo $result_software->nombre;
 
@@ -130,43 +130,43 @@ function ver_solicitud()
                             </tr>
                             <tr>
                                 <td>';
-                switch ($result->estado) {
+                switch ($result_software->estado) {
                     case '0':
-                        echo '<button style="background-color:#90EE90" disabled>' . obtenerTraduccion("registrada") . '</button>';
+                        echo '<button style="background-color:#DDA0DD" disabled>' . obtenerTraduccion("registrada") . '</button>';
                         break;
                     case '1':
-                        echo '<button style="background-color:#90EE90" disabled>' . obtenerTraduccion("descartada") . '</button>';
+                        echo '<button style="background-color:#A9A9A9" disabled>' . obtenerTraduccion("descartada") . '</button>';
                         break;
                     case '2':
-                        echo '<button style="background-color:#90EE90" disabled>' . obtenerTraduccion("reabierta") . '</button>';
+                        echo '<button style="background-color:#DDA0DD" disabled>' . obtenerTraduccion("reabierta") . '</button>';
                         break;
                     case '3':
-                        echo '<button style="background-color:#90EE90" disabled>' . obtenerTraduccion("pendiente") . '</button>';
+                        echo '<button style="background-color:#FF6347" disabled>' . obtenerTraduccion("pendiente") . '</button>';
                         break;
                     case '4':
-                        echo '<button style="background-color:#90EE90" disabled>' . obtenerTraduccion("validada") . '</button>';
+                        echo '<button style="background-color:#99CCFF" disabled>' . obtenerTraduccion("validada") . '</button>';
                         break;
                     case '5':
                         echo '<button style="background-color:#90EE90" disabled>' . obtenerTraduccion("desplegada") . '</button>';
                         break;
-
-                        echo '</td>
-                                <td>';
-
-                        if ($result->estado == 1) {
-                            if (is_user_logged_in()) {
-                                $user = wp_get_current_user();
-                                $roles = ( array )$user->roles;
-                                $role = $roles[0];
-                                if ($role == 'administrator') {
-                                    echo '<button id="botonCerrar" onclick="cerrarIncidencia()">' . obtenerTraduccion("cerrar") . '</button>';
-                                }
-                            }
-                        }
-                        echo '</td>
-                            </tr>
-                        </table>';
                 }
+                echo '</td>
+                        <td>';
+
+                if ($result->estado == 1) {
+                    if (is_user_logged_in()) {
+                        $user = wp_get_current_user();
+                        $roles = ( array )$user->roles;
+                        $role = $roles[0];
+                        if ($role == 'administrator') {
+                            echo '<button id="botonCerrar" onclick="cerrarIncidencia()">' . obtenerTraduccion("cerrar") . '</button>';
+                        }
+                    }
+                }
+                echo '</td>
+                    </tr>
+                </table>';
+
 
 
             }

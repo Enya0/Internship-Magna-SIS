@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c9906f13-504d-4a01-9d07-0af1f34b4826" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/solicitud.php" beforeDir="false" afterPath="$PROJECT_DIR$/solicitud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/solicitudes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traducciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/traducciones.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +23,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/solicitud.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="174" column="44" selection-start-line="174" selection-start-column="44" selection-end-line="174" selection-end-column="44" />
+            <state relative-caret-position="415">
+              <caret line="140" column="69" selection-start-line="140" selection-start-column="69" selection-end-line="140" selection-end-column="69" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
@@ -48,11 +49,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/traducciones.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="396" column="74" selection-start-line="396" selection-start-column="74" selection-end-line="396" selection-end-column="74" />
+            <state relative-caret-position="512">
+              <caret line="388" column="34" selection-start-line="388" selection-start-column="34" selection-end-line="388" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solicitudes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1090">
+              <caret line="222" column="58" lean-forward="true" selection-start-line="222" selection-start-column="58" selection-end-line="222" selection-end-column="58" />
+              <folding>
+                <element signature="e#6#128#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,7 +100,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/incidencia.php" />
-        <option value="$PROJECT_DIR$/solicitudes.php" />
         <option value="$PROJECT_DIR$/verIncidencias.php" />
         <option value="$PROJECT_DIR$/obtenerIncidenciasLaboratorio.php" />
         <option value="$PROJECT_DIR$/enviarIncidencias.php" />
@@ -98,15 +110,16 @@
         <option value="$PROJECT_DIR$/siguienteSolicitudes.php" />
         <option value="$PROJECT_DIR$/enviarSolicitudes.php" />
         <option value="$PROJECT_DIR$/formularios.php" />
-        <option value="$PROJECT_DIR$/solicitud.php" />
+        <option value="$PROJECT_DIR$/solicitudes.php" />
         <option value="$PROJECT_DIR$/traducciones.php" />
+        <option value="$PROJECT_DIR$/solicitud.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="840" />
+    <option name="x" value="27" />
     <option name="y" value="23" />
-    <option name="width" value="840" />
+    <option name="width" value="1653" />
     <option name="height" value="954" />
   </component>
   <component name="ProjectView">
@@ -164,18 +177,18 @@
       <workItem from="1554451901887" duration="22000" />
       <workItem from="1554451977990" duration="3743000" />
       <workItem from="1554888898775" duration="5616000" />
-      <workItem from="1555335839463" duration="1786000" />
+      <workItem from="1555335839463" duration="2885000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21558000" />
+    <option name="totallyTimeSpent" value="22657000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="954" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2002442" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2002442" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -264,16 +277,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solicitudes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3480">
-          <caret line="232" column="49" selection-start-line="232" selection-start-column="49" selection-end-line="232" selection-end-column="49" />
-          <folding>
-            <element signature="e#6#128#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/verIncidencias.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -305,10 +308,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/traducciones.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="388" column="34" selection-start-line="388" selection-start-column="34" selection-end-line="388" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solicitudes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1090">
+          <caret line="222" column="58" lean-forward="true" selection-start-line="222" selection-start-column="58" selection-end-line="222" selection-end-column="58" />
+          <folding>
+            <element signature="e#6#128#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/solicitud.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="174" column="44" selection-start-line="174" selection-start-column="44" selection-end-line="174" selection-end-column="44" />
+        <state relative-caret-position="415">
+          <caret line="140" column="69" selection-start-line="140" selection-start-column="69" selection-end-line="140" selection-end-column="69" />
           <folding>
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
@@ -317,13 +337,6 @@
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/traducciones.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="396" column="74" selection-start-line="396" selection-start-column="74" selection-end-line="396" selection-end-column="74" />
         </state>
       </provider>
     </entry>
