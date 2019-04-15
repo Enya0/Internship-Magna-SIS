@@ -389,6 +389,14 @@ function obtenerTraduccion($str)
                 return "Zabalduta";
             }
             break;
+
+        case 'verSolicitudError':
+            if ($idioma == $euskera) {
+                return "Eskaeraren identifikatzailea ez da sartu.";
+            } else {
+                return "No se ha introducido un identificador de solicitud.";
+            }
+            break;
     }
 }
 

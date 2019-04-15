@@ -36,7 +36,7 @@ function ver_solicitud()
                         </tr>
                     </table>';
             $results_asig = $wpdb->get_results('SELECT nombre,nombre_eus FROM ' . $wpdb->prefix . 'asignatura_solicitudes WHERE id=' . $result->id_asignatura);
-            $nombre_asig;
+            $nombre_asig = "";
             foreach ($results_asig as $result_asig) {
                 if ($idioma == "eu_ES") {
                     $nombre_asig = $result_asig->nombre_eus;
@@ -45,7 +45,7 @@ function ver_solicitud()
                 }
             }
 
-            $results_aula = $wpdb->get_results('SELECT nombre,nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes WHERE id IN (SELECT id_aula FROM ' . $wpdb->prefix . 'solicitud_aula_solicitudes WHERE id_solicitud=' . $id_solicitud '.)');
+            $results_aula = $wpdb->get_results('SELECT nombre,nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes WHERE id IN (SELECT id_aula FROM ' . $wpdb->prefix . 'solicitud_aula_solicitudes WHERE id_solicitud=' . $id_solicitud . ')');
 
             $nombres_aulas = [];
             foreach ($results_aula as $result_aula) {
@@ -54,10 +54,10 @@ function ver_solicitud()
                 } else {
                     array_push($nombres_aulas, $result_aula->nombre);
                 }
-            }            
+            }
 
-            $results_so = $wpdb->get_results('SELECT nombre FROM ' . $wpdb->prefix . 'so_solicitudes WHERE id IN (SELECT id_so FROM ' . $wpdb->prefix . 'solicitud_so_solicitudes WHERE id_solicitud=' . $id_solicitud '.)');
-            
+            $results_so = $wpdb->get_results('SELECT nombre FROM ' . $wpdb->prefix . 'so_solicitudes WHERE id IN (SELECT id_so FROM ' . $wpdb->prefix . 'solicitud_so_solicitudes WHERE id_solicitud=' . $id_solicitud . ')');
+
             $nombres_so = [];
 
             foreach ($results_so as $result_so) {
@@ -148,31 +148,31 @@ function ver_solicitud()
                         break;
                     case '5':
                         echo '<button style="background-color:#90EE90" disabled>' . obtenerTraduccion("desplegada") . '</button>';
-                        break;                       
-                
-                echo '</td>
+                        break;
+
+                        echo '</td>
                                 <td>';
 
-                if($result->estado == 1){
-                    if( is_user_logged_in() ) {
-                        $user = wp_get_current_user();
-                        $roles = ( array ) $user->roles;
-                        $role = $roles[0];
-                        if($role == 'administrator'){
-                            echo '<button id="botonCerrar" onclick="cerrarIncidencia()">' . obtenerTraduccion("cerrar") . '</button>';
+                        if ($result->estado == 1) {
+                            if (is_user_logged_in()) {
+                                $user = wp_get_current_user();
+                                $roles = ( array )$user->roles;
+                                $role = $roles[0];
+                                if ($role == 'administrator') {
+                                    echo '<button id="botonCerrar" onclick="cerrarIncidencia()">' . obtenerTraduccion("cerrar") . '</button>';
+                                }
+                            }
                         }
-                    }
-                }
-                echo '</td>
+                        echo '</td>
                             </tr>
                         </table>';
+                }
+
+
             }
-
-            
         }
-
     } else {
-        echo obtenerTraduccion("verIncidenciaError");
+        echo obtenerTraduccion("verSolicitudError");
     }
 }
 ?>
