@@ -429,6 +429,22 @@ function obtenerTraduccion($str)
                 return "Validar";
             }
             break;
+
+        case 'motivo':
+            if ($idioma == $euskera) {
+                return "Arrazoia";
+            } else {
+                return "Motivo";
+            }
+            break;
+
+        case 'errorMotivo':
+            if ($idioma == $euskera) {
+                return "Ez da arrazoia bete.";
+            } else {
+                return "No se ha introducido el motivo.";
+            }
+            break;
     }
 }
 

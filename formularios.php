@@ -203,7 +203,6 @@ function form_solicitud(){
                 processData: false,
                 contentType: false,
             }).done(function (data) {
-                console.log(data);
                 if(data.status == "0"){
                     $("#mensaje").html(data.msg);
                     $("#fsolicitud")[0].reset();
@@ -212,7 +211,6 @@ function form_solicitud(){
                 }
             }
             ).fail(function (data) {
-                console.log(data);
                 if(data.status == "0"){
                     $("#mensaje").html(data.msg);
                     $("#fsolicitud")[0].reset();

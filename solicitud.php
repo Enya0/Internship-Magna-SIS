@@ -2,13 +2,13 @@
 
 function ver_solicitud()
 {
+    $email = "";
     if (isset($_GET['id'])) {
         $id_solicitud = $_GET['id'];
 
         global $wpdb;
-
         $results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'solicitud_solicitudes WHERE id=' . $id_solicitud);
-
+        echo '<div id="divSolicitud">';
         foreach ($results as $result) {
 
             $idioma = get_locale();
@@ -30,8 +30,8 @@ function ver_solicitud()
                             </td>
                             <td>
                                 ';
-
-            echo $result->email;
+            $email = $result->email;
+            echo $email;
             echo '</td>
                         </tr>
                     </table>';
@@ -160,8 +160,8 @@ function ver_solicitud()
                             $roles = ( array )$user->roles;
                             $role = $roles[0];
                             if ($role == 'administrator') {
-                                echo '<button id="botonDescartar" onclick="">' . obtenerTraduccion("descartar") . '</button>';
-                                echo '<button id="botonPendiente" onclick="">' . obtenerTraduccion("marcarPendiente") . '</button>';
+                                echo '<button id="botonDescartar" onclick="cambiarEstado(1,'.$result_software->id.')">' . obtenerTraduccion("descartar") . '</button>&nbsp;&nbsp;';
+                                echo '<button id="botonPendiente" onclick="cambiarEstado(3,'.$result_software->id.')">' . obtenerTraduccion("marcarPendiente") . '</button>';
                             }
                         }
                         break;
@@ -171,7 +171,7 @@ function ver_solicitud()
                             $roles = ( array )$user->roles;
                             $role = $roles[0];
                             if ($role == 'profesor') {
-                                echo '<button id="botonReabrir" onclick="">' . obtenerTraduccion("reabrir") . '</button>';
+                                echo '<button id="botonReabrir" onclick="cambiarEstado(2,'.$result_software->id.')">' . obtenerTraduccion("reabrir") . '</button>';
                             }
                         }
                         break;
@@ -181,8 +181,8 @@ function ver_solicitud()
                             $roles = ( array )$user->roles;
                             $role = $roles[0];
                             if ($role == 'administrator') {
-                                echo '<button id="botonDescartar" onclick="">' . obtenerTraduccion("descartar") . '</button>';
-                                echo '<button id="botonPendiente" onclick="">' . obtenerTraduccion("marcarPendiente") . '</button>';
+                                echo '<button id="botonDescartar" onclick="cambiarEstado(1,'.$result_software->id.')">' . obtenerTraduccion("descartar") . '</button>&nbsp;&nbsp;';
+                                echo '<button id="botonPendiente" onclick="cambiarEstado(3,'.$result_software->id.')">' . obtenerTraduccion("marcarPendiente") . '</button>';
                             }
                         }
                         break;
@@ -192,7 +192,7 @@ function ver_solicitud()
                             $roles = ( array )$user->roles;
                             $role = $roles[0];
                             if ($role == 'profesor') {
-                                echo '<button id="botonValidar" onclick="">' . obtenerTraduccion("validar") . '</button>';
+                                echo '<button id="botonValidar" onclick="cambiarEstado(4,'.$result_software->id.')">' . obtenerTraduccion("validar") . '</button>';
                             }
                         }
                         break;
@@ -202,20 +202,10 @@ function ver_solicitud()
                             $roles = ( array )$user->roles;
                             $role = $roles[0];
                             if ($role == 'administrator') {
-                                echo '<button id="botonDesplegar" onclick="">' . obtenerTraduccion("desplegar") . '</button>';
+                                echo '<button id="botonDesplegar" onclick="cambiarEstado(5,'.$result_software->id.')">' . obtenerTraduccion("desplegar") . '</button>';
                             }
                         }
                         break;
-                }
-                if ($result->estado == 1) {
-                    if (is_user_logged_in()) {
-                        $user = wp_get_current_user();
-                        $roles = ( array )$user->roles;
-                        $role = $roles[0];
-                        if ($role == 'administrator') {
-                            echo '<button id="botonCerrar" onclick="cerrarIncidencia()">' . obtenerTraduccion("cerrar") . '</button>';
-                        }
-                    }
                 }
                 echo '</td>
                     </tr>
@@ -225,6 +215,53 @@ function ver_solicitud()
 
             }
         }
+        echo '</div><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript">
+
+        function cambiarEstado(nuevoEstado, idSoftware){
+            if(nuevoEstado == 1){
+                var formData = new FormData();
+                formData.append("pagina", 0);
+                formData.append("email", "'.$email.'");
+                formData.append("idSolicitud", '.$_GET['id'].');
+                formData.append("idSoftware", idSoftware);
+                $.ajax({
+                    url: "/wp-content/plugins/solicitudes/descartarSolicitud.php",
+                    type: "POST",
+                    data: formData,
+                    dataType: "json",
+                    mimeType: "multipart/form-data",
+                    processData: false,
+                    contentType: false,
+                }).done(function (data) {
+                        $("#divSolicitud").html(data["responseText"]); 
+                    }
+                ).fail(function (data) {
+                        $("#divSolicitud").html(data["responseText"]); 
+                    }
+                );
+            }else{
+                var formData = new FormData();
+                formData.append("nuevoEstado", nuevoEstado);
+                formData.append("idSoftware", idSoftware);
+                $.ajax({
+                    url: "/wp-content/plugins/solicitudes/cambiarEstadoSolicitud.php",
+                    type: "POST",
+                    data: formData,
+                    dataType: "json",
+                    mimeType: "multipart/form-data",
+                    processData: false,
+                    contentType: false,
+                }).done(function (data) {
+                        location.reload(); 
+                    }
+                ).fail(function (data) {
+                         location.reload(); 
+                    }
+                );
+            }
+        }
+    </script>';
     } else {
         echo obtenerTraduccion("verSolicitudError");
     }
