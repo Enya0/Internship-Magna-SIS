@@ -397,6 +397,38 @@ function obtenerTraduccion($str)
                 return "No se ha introducido un identificador de solicitud.";
             }
             break;
+
+        case 'descartar':
+            if ($idioma == $euskera) {
+                return "Ezeztatu";
+            } else {
+                return "Descartar";
+            }
+            break;
+
+        case 'marcarPendiente':
+            if ($idioma == $euskera) {
+                return "Balioztatze bezala jarri";
+            } else {
+                return "Marcar pendiente de validación";
+            }
+            break;
+
+        case 'reabrir':
+            if ($idioma == $euskera) {
+                return "Berrireki";
+            } else {
+                return "Reabrir";
+            }
+            break;
+
+        case 'validar':
+            if ($idioma == $euskera) {
+                return "Balioztatu";
+            } else {
+                return "Validar";
+            }
+            break;
     }
 }
 

@@ -153,6 +153,60 @@ function ver_solicitud()
                 echo '</td>
                         <td>';
 
+                switch ($result_software->estado) {
+                    case '0':
+                        if (is_user_logged_in()) {
+                            $user = wp_get_current_user();
+                            $roles = ( array )$user->roles;
+                            $role = $roles[0];
+                            if ($role == 'administrator') {
+                                echo '<button id="botonDescartar" onclick="">' . obtenerTraduccion("descartar") . '</button>';
+                                echo '<button id="botonPendiente" onclick="">' . obtenerTraduccion("marcarPendiente") . '</button>';
+                            }
+                        }
+                        break;
+                    case '1':
+                        if (is_user_logged_in()) {
+                            $user = wp_get_current_user();
+                            $roles = ( array )$user->roles;
+                            $role = $roles[0];
+                            if ($role == 'profesor') {
+                                echo '<button id="botonReabrir" onclick="">' . obtenerTraduccion("reabrir") . '</button>';
+                            }
+                        }
+                        break;
+                    case '2':
+                        if (is_user_logged_in()) {
+                            $user = wp_get_current_user();
+                            $roles = ( array )$user->roles;
+                            $role = $roles[0];
+                            if ($role == 'administrator') {
+                                echo '<button id="botonDescartar" onclick="">' . obtenerTraduccion("descartar") . '</button>';
+                                echo '<button id="botonPendiente" onclick="">' . obtenerTraduccion("marcarPendiente") . '</button>';
+                            }
+                        }
+                        break;
+                    case '3':
+                        if (is_user_logged_in()) {
+                            $user = wp_get_current_user();
+                            $roles = ( array )$user->roles;
+                            $role = $roles[0];
+                            if ($role == 'profesor') {
+                                echo '<button id="botonValidar" onclick="">' . obtenerTraduccion("validar") . '</button>';
+                            }
+                        }
+                        break;
+                    case '4':
+                        if (is_user_logged_in()) {
+                            $user = wp_get_current_user();
+                            $roles = ( array )$user->roles;
+                            $role = $roles[0];
+                            if ($role == 'administrator') {
+                                echo '<button id="botonDesplegar" onclick="">' . obtenerTraduccion("desplegar") . '</button>';
+                            }
+                        }
+                        break;
+                }
                 if ($result->estado == 1) {
                     if (is_user_logged_in()) {
                         $user = wp_get_current_user();
