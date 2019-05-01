@@ -191,7 +191,7 @@ function ver_solicitud()
                             $user = wp_get_current_user();
                             $roles = ( array )$user->roles;
                             $role = $roles[0];
-                            if ($role == 'profesor') {
+                            if ($role == 'administrator') {
                                 echo '<button id="botonValidar" onclick="cambiarEstado(4,'.$result_software->id.')">' . obtenerTraduccion("validar") . '</button>';
                             }
                         }
@@ -261,9 +261,31 @@ function ver_solicitud()
                         $("#divSolicitud").html(data["responseText"]); 
                     }
                 );
+            }else if(nuevoEstado == 3){
+                var formData = new FormData();
+                formData.append("pagina", 0);
+                formData.append("email", "'.$email.'");
+                formData.append("idSolicitud", '.$_GET['id'].');
+                formData.append("idSoftware", idSoftware);
+                $.ajax({
+                    url: "/wp-content/plugins/solicitudes/funciones/solicitud/marcarSolicitudPendiente.php",
+                    type: "POST",
+                    data: formData,
+                    dataType: "json",
+                    mimeType: "multipart/form-data",
+                    processData: false,
+                    contentType: false,
+                }).done(function (data) {
+                        $("#divSolicitud").html(data["responseText"]); 
+                    }
+                ).fail(function (data) {
+                        $("#divSolicitud").html(data["responseText"]); 
+                    }
+                );
             }else{
                 var formData = new FormData();
                 formData.append("nuevoEstado", nuevoEstado);
+                formData.append("email", "'.$email.'");
                 formData.append("idSoftware", idSoftware);
                 $.ajax({
                     url: "/wp-content/plugins/solicitudes/funciones/solicitud/cambiarEstadoSolicitud.php",

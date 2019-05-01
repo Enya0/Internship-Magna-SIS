@@ -1,4 +1,5 @@
 <?php
+include('../email/mandarValidado.php');
 
 if(isset($_POST['nuevoEstado']) && isset($_POST['idSoftware'])){
     $nuevoEstado = $_POST['nuevoEstado'];
@@ -15,6 +16,7 @@ if(isset($_POST['nuevoEstado']) && isset($_POST['idSoftware'])){
     $where_format = array('%d');
 
     $wpdb->update( $table, $data, $where, $format, $where_format);
+    mandarValidado($_POST['idSoftware'], $_POST['email']);
 }
 
 ?>

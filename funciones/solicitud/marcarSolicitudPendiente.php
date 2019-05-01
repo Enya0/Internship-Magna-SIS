@@ -2,7 +2,7 @@
 $path = $_SERVER['DOCUMENT_ROOT'];
 include_once $path . '/wp-load.php';
 include('../../traducciones.php');
-include('../email/mandarReabierto.php');
+include('../email/mandarPendienteDeValidacion.php');
 
 if(isset($_POST['pagina']) && isset($_POST['idSoftware']) && isset($_POST['email'])){
     $pagina = $_POST['pagina'];
@@ -10,7 +10,7 @@ if(isset($_POST['pagina']) && isset($_POST['idSoftware']) && isset($_POST['email
 
         echo '<form id="fmotivo"><input type="text" id="idSoftware" name="idSoftware" style="visibility: hidden;" value="'
             . $_POST['idSoftware'].'"><table><tr><td>';
-        echo obtenerTraduccion('motivo') . '*:';
+        echo obtenerTraduccion('mensaje') . '*:';
         echo '</td><td width="70%"><input type="text" id="motivo" name="motivo" class="texto-form">';
         echo '</td></tr>
         <tr><td><input type="button" id="send" name="send" value="'.obtenerTraduccion("enviar").'" onclick="enviarMotivo()"></td>
@@ -26,7 +26,7 @@ if(isset($_POST['pagina']) && isset($_POST['idSoftware']) && isset($_POST['email
             formData.append("email", "'.$_POST["email"].'")
             formData.append("pagina", 1);
             $.ajax({
-                url: "/wp-content/plugins/solicitudes/funciones/solicitud/reabrirSolicitud.php",
+                url: "/wp-content/plugins/solicitudes/funciones/solicitud/marcarSolicitudPendiente.php",
                 type: "POST",
                 data: formData,
                 dataType: "json",
@@ -46,7 +46,7 @@ if(isset($_POST['pagina']) && isset($_POST['idSoftware']) && isset($_POST['email
                 }else{
                     window.location.href = "./ver-solicitud?id='.$_POST['idSolicitud'].'";
                 } 
-            }
+                }
             );
         }
         </script>';
@@ -61,9 +61,7 @@ if(isset($_POST['pagina']) && isset($_POST['idSoftware']) && isset($_POST['email
                 global $wpdb;
                 $idSoftware = $_POST['idSoftware'];
 
-                $wpdb->insert($wpdb->prefix . 'motivo_solicitudes',array('texto'=>$motivo,'fecha'=>date("d-m-Y h:i"), 'id_sw_S'=>$idSoftware),array('%s','%s','%s'));
-
-                $nuevoEstado = 2;
+                $nuevoEstado = 3;
 
                 $table = $wpdb->prefix . 'softwareSolicitud_solicitudes';
                 $data = array("estado"=>$nuevoEstado);
@@ -73,7 +71,7 @@ if(isset($_POST['pagina']) && isset($_POST['idSoftware']) && isset($_POST['email
 
                 $wpdb->update( $table, $data, $where, $format, $where_format);
 
-                mandarReabierto($idSoftware, $motivo);
+                mandarPendienteDeValidacion($idSoftware, $_POST['email'], $motivo);
 
             }
         }
