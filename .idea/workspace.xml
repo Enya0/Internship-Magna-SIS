@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9906f13-504d-4a01-9d07-0af1f34b4826" name="Default Changelist" comment="" />
+    <list default="true" id="c9906f13-504d-4a01-9d07-0af1f34b4826" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cambiarEstadoSolicitud.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/solicitud/cambiarEstadoSolicitud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cerrarIncidencia.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/incidencia/cerrarIncidencia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/descartarSolicitud.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/solicitud/descartarSolicitud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enviarIncidencias.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/incidencia/enviarIncidencia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enviarSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/solicitud/enviarSolicitudes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formularios.php" beforeDir="false" afterPath="$PROJECT_DIR$/formularios.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incidencia.php" beforeDir="false" afterPath="$PROJECT_DIR$/verIncidencia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertarAsignatura.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/insertarAsignatura.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insertarSO.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/insertarSO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mandarDescartado.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/email/mandarDescartado.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mandarIncidencias.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/email/mandarIncidencias.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mandarReabierto.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/email/mandarReabierto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mandarSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/email/mandarSolicitudes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obtenerIncidenciasLaboratorio.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/incidencia/obtenerIncidenciasLaboratorio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reabrirSolicitud.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/solicitud/reabrirSolicitud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siguienteSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/solicitud/siguienteSolicitudes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solicitud.php" beforeDir="false" afterPath="$PROJECT_DIR$/verSolicitud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/solicitudes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/verIncidencias.php" beforeDir="false" afterPath="$PROJECT_DIR$/verIncidencias.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,69 +30,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/formularios.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="178" column="130" lean-forward="true" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="130" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/solicitud.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="225" column="30" selection-start-line="225" selection-start-column="30" selection-end-line="225" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/descartarSolicitud.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#form#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mandarDescartado.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/reabrirSolicitud.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/traducciones.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="442" column="44" selection-start-line="442" selection-start-column="44" selection-end-line="442" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -84,7 +43,39 @@
       <find>soft</find>
       <find>registrada</find>
       <find>enviar</find>
+      <find>cambiarEstadoSolicitud.php</find>
+      <find>cerrarIncidencia.php</find>
+      <find>descartarSolici</find>
+      <find>enviarIncidencias</find>
+      <find>enviarIncidencia.php</find>
+      <find>enviarSolicitudes.php</find>
+      <find>mandarDescartado.php</find>
+      <find>mandarIncidencias.php</find>
+      <find>mandarReabierto.php</find>
+      <find>mandarSolicitudes.php</find>
+      <find>obtenerIncidencias</find>
+      <find>reabrirSolicitud.php</find>
+      <find>siguienteSolicitudes</find>
+      <find>insertarAsignatura.php</find>
+      <find>insertarSO.php</find>
     </findStrings>
+    <replaceStrings>
+      <replace>funciones/solicitud/descartarSolici</replace>
+      <replace>funciones/solicitud/enviarIncidencia.php</replace>
+      <replace>funciones/solicitud/enviarSolicitudes.php</replace>
+      <replace>funciones/email/mandarDescartado.php</replace>
+      <replace>funciones/email/mandarIncidencias.php</replace>
+      <replace>funciones/email/mandarReabierto.php</replace>
+      <replace>funciones/email/mandarSolicitudes.php</replace>
+      <replace>funciones/incidencia/obtenerIncidencias</replace>
+      <replace>funciones/solicitud/reabrirSolicitud.php</replace>
+      <replace>funciones/solicitud/siguienteSolicitudes</replace>
+      <replace>funciones/insertarAsignatura.php</replace>
+      <replace>funciones/insertarSO.php</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -92,9 +83,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/incidencia.php" />
         <option value="$PROJECT_DIR$/verIncidencias.php" />
-        <option value="$PROJECT_DIR$/obtenerIncidenciasLaboratorio.php" />
         <option value="$PROJECT_DIR$/enviarIncidencias.php" />
         <option value="$PROJECT_DIR$/mandarIncidencias.php" />
         <option value="$PROJECT_DIR$/cerrarIncidencia.php" />
@@ -106,16 +95,27 @@
         <option value="$PROJECT_DIR$/cambiarEstadoSolicitud.php" />
         <option value="$PROJECT_DIR$/traducciones.php" />
         <option value="$PROJECT_DIR$/formularios.php" />
-        <option value="$PROJECT_DIR$/solicitud.php" />
         <option value="$PROJECT_DIR$/descartarSolicitud.php" />
         <option value="$PROJECT_DIR$/mandarDescartado.php" />
+        <option value="$PROJECT_DIR$/reabrirSolicitud.php" />
+        <option value="$PROJECT_DIR$/mandarReabierto.php" />
+        <option value="$PROJECT_DIR$/solicitud.php" />
+        <option value="$PROJECT_DIR$/incidencia.php" />
+        <option value="$PROJECT_DIR$/obtenerIncidenciasLaboratorio.php" />
+        <option value="$PROJECT_DIR$/funciones/incidencia/enviarIncidencia.php" />
+        <option value="$PROJECT_DIR$/funciones/incidencia/obtenerIncidenciasLaboratorio.php" />
+        <option value="$PROJECT_DIR$/funciones/solicitud/descartarSolicitud.php" />
+        <option value="$PROJECT_DIR$/funciones/solicitud/enviarSolicitudes.php" />
+        <option value="$PROJECT_DIR$/funciones/solicitud/reabrirSolicitud.php" />
+        <option value="$PROJECT_DIR$/funciones/solicitud/siguienteSolicitudes.php" />
+        <option value="$PROJECT_DIR$/funciones/insertarAsignatura.php" />
+        <option value="$PROJECT_DIR$/funciones/insertarSO.php" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="27" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1653" />
+    <option name="width" value="1680" />
     <option name="height" value="954" />
   </component>
   <component name="ProjectView">
@@ -131,6 +131,29 @@
               <item name="Internship-Magna-SIS" type="b2602c69:ProjectViewProjectNode" />
               <item name="Internship-Magna-SIS" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Internship-Magna-SIS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Magna-SIS" type="462c0819:PsiDirectoryNode" />
+              <item name="funciones" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Internship-Magna-SIS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Magna-SIS" type="462c0819:PsiDirectoryNode" />
+              <item name="funciones" type="462c0819:PsiDirectoryNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Internship-Magna-SIS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Magna-SIS" type="462c0819:PsiDirectoryNode" />
+              <item name="funciones" type="462c0819:PsiDirectoryNode" />
+              <item name="incidencia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Internship-Magna-SIS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Magna-SIS" type="462c0819:PsiDirectoryNode" />
+              <item name="funciones" type="462c0819:PsiDirectoryNode" />
+              <item name="solicitud" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -145,6 +168,12 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/funciones" />
+      <recent name="$PROJECT_DIR$/funciones/solicitud" />
+      <recent name="$PROJECT_DIR$/funciones/incidencia" />
+      <recent name="$PROJECT_DIR$/funciones/email" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -179,17 +208,19 @@
       <workItem from="1554451977990" duration="3743000" />
       <workItem from="1554888898775" duration="5616000" />
       <workItem from="1555335839463" duration="2885000" />
-      <workItem from="1555506325284" duration="6486000" />
+      <workItem from="1555506325284" duration="6711000" />
+      <workItem from="1556535806467" duration="14000" />
+      <workItem from="1556714623841" duration="1280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29143000" />
+    <option name="totallyTimeSpent" value="30662000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="954" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="954" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1916972" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1965812" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -221,42 +252,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enviarIncidencias.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/error_log">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/insertarAsignatura.php">
+    <entry file="file://$PROJECT_DIR$/traducciones.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/insertarSO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mandarIncidencias.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/obtenerIncidenciasLaboratorio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="124" selection-start-line="11" selection-start-column="124" selection-end-line="11" selection-end-column="124" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="6630">
+          <caret line="442" column="44" selection-start-line="442" selection-start-column="44" selection-end-line="442" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -267,33 +269,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/error_log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cerrarIncidencia.php">
+    <entry file="file://$PROJECT_DIR$/verIncidencia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="13" selection-end-column="62" />
+        <state relative-caret-position="1620">
+          <caret line="108" column="75" selection-start-line="108" selection-start-column="75" selection-end-line="108" selection-end-column="75" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/incidencia.php">
+    <entry file="file://$PROJECT_DIR$/verSolicitud.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1845">
-          <caret line="123" column="13" selection-start-line="100" selection-start-column="4" selection-end-line="123" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cambiarEstadoSolicitud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="3934">
+          <caret line="268" column="78" selection-start-line="268" selection-start-column="78" selection-end-line="268" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/solicitudes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
+        <state relative-caret-position="3279">
           <caret line="222" column="58" selection-start-line="222" selection-start-column="58" selection-end-line="222" selection-end-column="58" />
           <folding>
             <element signature="e#6#128#0#PHP" expanded="true" />
@@ -301,71 +305,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mandarSolicitudes.php">
+    <entry file="file://$PROJECT_DIR$/formularios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="178" column="130" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funciones/email/mandarDescartado.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funciones/email/mandarIncidencias.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="18" selection-start-line="6" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funciones/email/mandarReabierto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funciones/email/mandarSolicitudes.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/enviarSolicitudes.php">
+    <entry file="file://$PROJECT_DIR$/funciones/incidencia/cerrarIncidencia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="15" selection-start-line="55" selection-end-line="56" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="13" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/siguienteSolicitudes.php">
+    <entry file="file://$PROJECT_DIR$/funciones/incidencia/enviarIncidencia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="73" selection-start-line="73" selection-end-line="74" selection-end-column="34" />
+        <state relative-caret-position="-13">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/traducciones.php">
+    <entry file="file://$PROJECT_DIR$/funciones/incidencia/obtenerIncidenciasLaboratorio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="442" column="44" selection-start-line="442" selection-start-column="44" selection-end-line="442" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solicitud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="225" column="30" selection-start-line="225" selection-start-column="30" selection-end-line="225" selection-end-column="30" />
+        <state relative-caret-position="-628">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
           <folding>
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/formularios.php">
+    <entry file="file://$PROJECT_DIR$/funciones/solicitud/cambiarEstadoSolicitud.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="178" column="130" lean-forward="true" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="130" />
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/descartarSolicitud.php">
+    <entry file="file://$PROJECT_DIR$/funciones/solicitud/descartarSolicitud.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+        <state relative-caret-position="-463">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#input#0;n#form#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mandarDescartado.php">
+    <entry file="file://$PROJECT_DIR$/funciones/solicitud/enviarSolicitudes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        <state relative-caret-position="-118">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reabrirSolicitud.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/funciones/solicitud/reabrirSolicitud.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-463">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funciones/solicitud/siguienteSolicitudes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-433">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#3;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#4;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funciones/insertarAsignatura.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funciones/insertarSO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

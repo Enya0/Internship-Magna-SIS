@@ -1,8 +1,8 @@
 <?php
 $path = $_SERVER['DOCUMENT_ROOT'];
 include_once $path . '/wp-load.php';
-include('./traducciones.php');
-include('./mandarReabierto.php');
+include('../../traducciones.php');
+include('../email/mandarDescartado.php');
 
 if(isset($_POST['pagina']) && isset($_POST['idSoftware']) && isset($_POST['email'])){
     $pagina = $_POST['pagina'];
@@ -26,7 +26,7 @@ if(isset($_POST['pagina']) && isset($_POST['idSoftware']) && isset($_POST['email
             formData.append("email", "'.$_POST["email"].'")
             formData.append("pagina", 1);
             $.ajax({
-                url: "/wp-content/plugins/solicitudes/reabrirSolicitud.php",
+                url: "/wp-content/plugins/solicitudes/funciones/solicitud/descartarSolicitud.php",
                 type: "POST",
                 data: formData,
                 dataType: "json",
@@ -63,7 +63,7 @@ if(isset($_POST['pagina']) && isset($_POST['idSoftware']) && isset($_POST['email
 
                 $wpdb->insert($wpdb->prefix . 'motivo_solicitudes',array('texto'=>$motivo,'fecha'=>date("d-m-Y h:i"), 'id_sw_S'=>$idSoftware),array('%s','%s','%s'));
 
-                $nuevoEstado = 2;
+                $nuevoEstado = 1;
 
                 $table = $wpdb->prefix . 'softwareSolicitud_solicitudes';
                 $data = array("estado"=>$nuevoEstado);
@@ -73,7 +73,7 @@ if(isset($_POST['pagina']) && isset($_POST['idSoftware']) && isset($_POST['email
 
                 $wpdb->update( $table, $data, $where, $format, $where_format);
 
-                mandarReabierto($idSoftware, $motivo);
+                mandarDescartado($idSoftware, $_POST['email'], $motivo);
 
             }
         }

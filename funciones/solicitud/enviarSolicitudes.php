@@ -1,7 +1,7 @@
 <?php
 
-	include('./traducciones.php');
-    include('./mandarSolicitudes.php');
+	include('../../traducciones.php');
+    include('../email/mandarSolicitudes.php');
 
 	$path = $_SERVER['DOCUMENT_ROOT']; 
 	include_once $path . '/wp-load.php';

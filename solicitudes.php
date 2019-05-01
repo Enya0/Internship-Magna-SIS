@@ -216,11 +216,11 @@ register_activation_hook( __FILE__, 'solicitudes_activate' );
 
 include( 'wp-content/plugins/solicitudes/formularios.php' );
 
-include( 'wp-content/plugins/solicitudes/incidencia.php' );
+include( 'wp-content/plugins/solicitudes/verIncidencia.php' );
 
 include( 'wp-content/plugins/solicitudes/verIncidencias.php' );
 
-include( 'wp-content/plugins/solicitudes/solicitud.php' );
+include( 'wp-content/plugins/solicitudes/verSolicitud.php' );
 
 add_shortcode('form_incidencias', 'form_incidencias');
 

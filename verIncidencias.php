@@ -34,7 +34,7 @@ function ver_incidencias()
             formData.append("id_aula", selectedId);
             
             $.ajax({
-                url: "/wp-content/plugins/solicitudes/obtenerIncidenciasLaboratorio.php",
+                url: "/wp-content/plugins/solicitudes/funciones/incidencia/obtenerIncidenciasLaboratorio.php",
                 type: "POST",
                 data: formData,
                 dataType: "json",

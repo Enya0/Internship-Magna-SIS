@@ -106,7 +106,7 @@ function ver_incidencia()
             var formData = new FormData();
             formData.append("id_incidencia", '.$result->id.');
             $.ajax({
-                url: "/wp-content/plugins/solicitudes/cerrarIncidencia.php",
+                url: "/wp-content/plugins/solicitudes/funciones/incidencia/cerrarIncidencia.php",
                 type: "POST",
                 data: formData,
                 dataType: "json",

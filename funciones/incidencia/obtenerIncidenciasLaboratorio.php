@@ -1,5 +1,5 @@
 <?php
-include('./traducciones.php');
+include('../../traducciones.php');
 
 $path = $_SERVER['DOCUMENT_ROOT']; 
 include_once $path . '/wp-load.php';
@@ -68,7 +68,7 @@ if (isset($_POST['id_aula'])) {
             formData.append("id_incidencia", id_incidencia);
             
             $.ajax({
-                url: "/wp-content/plugins/solicitudes/cerrarIncidencia.php",
+                url: "/wp-content/plugins/solicitudes/funciones/incidencia/cerrarIncidencia.php",
                 type: "POST",
                 data: formData,
                 dataType: "json",

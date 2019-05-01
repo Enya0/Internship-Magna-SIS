@@ -226,7 +226,28 @@ function ver_solicitud()
                 formData.append("idSolicitud", '.$_GET['id'].');
                 formData.append("idSoftware", idSoftware);
                 $.ajax({
-                    url: "/wp-content/plugins/solicitudes/descartarSolicitud.php",
+                    url: "/wp-content/plugins/solicitudes/funciones/solicitud/descartarSolicitud.php",
+                    type: "POST",
+                    data: formData,
+                    dataType: "json",
+                    mimeType: "multipart/form-data",
+                    processData: false,
+                    contentType: false,
+                }).done(function (data) {
+                        $("#divSolicitud").html(data["responseText"]); 
+                    }
+                ).fail(function (data) {
+                        $("#divSolicitud").html(data["responseText"]); 
+                    }
+                );
+            }else if(nuevoEstado == 2){
+                var formData = new FormData();
+                formData.append("pagina", 0);
+                formData.append("email", "'.$email.'");
+                formData.append("idSolicitud", '.$_GET['id'].');
+                formData.append("idSoftware", idSoftware);
+                $.ajax({
+                    url: "/wp-content/plugins/solicitudes/funciones/solicitud/reabrirSolicitud.php",
                     type: "POST",
                     data: formData,
                     dataType: "json",
@@ -245,7 +266,7 @@ function ver_solicitud()
                 formData.append("nuevoEstado", nuevoEstado);
                 formData.append("idSoftware", idSoftware);
                 $.ajax({
-                    url: "/wp-content/plugins/solicitudes/cambiarEstadoSolicitud.php",
+                    url: "/wp-content/plugins/solicitudes/funciones/solicitud/cambiarEstadoSolicitud.php",
                     type: "POST",
                     data: formData,
                     dataType: "json",

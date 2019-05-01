@@ -81,7 +81,7 @@ function form_incidencias(){
             $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
 
             $.ajax({
-                url: "/wp-content/plugins/solicitudes/enviarIncidencias.php",
+                url: funciones/solicitud/enviarIncidencia.php
                 type: "POST",
                 data: new FormData(incidencia),
                 dataType: "json",
@@ -195,7 +195,7 @@ function form_solicitud(){
             $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
             
             $.ajax({
-                url: "/wp-content/plugins/solicitudes/siguienteSolicitudes.php",
+                url: "/wp-content/plugins/solicitudes/funciones/solicitud/siguienteSolicitudes.php",
                 type: "POST",
                 data: new FormData(solicitud),
                 dataType: "json",
@@ -227,7 +227,7 @@ function form_solicitud(){
             $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
             
             $.ajax({
-                url: "/wp-content/plugins/solicitudes/enviarSolicitudes.php",
+                url: "/wp-content/plugins/solicitudes/funciones/solicitud/enviarSolicitudes.php",
                 type: "POST",
                 data: new FormData(solicitud),
                 dataType: "json",
@@ -290,7 +290,7 @@ function form_so(){
             $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
 
             $.ajax({
-                url: "/wp-content/plugins/solicitudes/insertarSO.php",
+                url: "/wp-content/plugins/solicitudes/funciones/insertarSO.php",
                 type: "POST",
                 data: new FormData(nombre),
                 dataType: "json",
@@ -364,7 +364,7 @@ function form_asignatura(){
             $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
 
             $.ajax({
-                url: "/wp-content/plugins/solicitudes/insertarAsignatura.php",
+                url: "/wp-content/plugins/solicitudes/funciones/insertarAsignatura.php",
                 type: "POST",
                 data: new FormData(nombre),
                 dataType: "json",
