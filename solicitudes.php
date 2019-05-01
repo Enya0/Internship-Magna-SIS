@@ -222,6 +222,8 @@ include( 'wp-content/plugins/solicitudes/verIncidencias.php' );
 
 include( 'wp-content/plugins/solicitudes/verSolicitud.php' );
 
+include( 'wp-content/plugins/solicitudes/verLaboratorios.php' );
+
 add_shortcode('form_incidencias', 'form_incidencias');
 
 add_shortcode('form_solicitud', 'form_solicitud');
@@ -230,10 +232,14 @@ add_shortcode('form_so', 'form_so');
 
 add_shortcode('form_asignatura', 'form_asignatura');
 
+add_shortcode('form_cargar_csv', 'form_cargar_csv');
+
 add_shortcode('ver_incidencia', 'ver_incidencia');
 
 add_shortcode('ver_incidencias', 'ver_incidencias');
 
 add_shortcode('ver_solicitud', 'ver_solicitud');
+
+add_shortcode('ver_laboratorios', 'ver_laboratorios');
 
 ?>

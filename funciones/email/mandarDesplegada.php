@@ -1,22 +1,21 @@
 <?php
 
-	function mandarReabierto($id, $motivo){
+	function mandarDesplegada($id, $email){
         $path = $_SERVER['DOCUMENT_ROOT'];
         include_once $path . '/wp-load.php';
 
 
-        $to = "julen.miner@magnasis.com";
-		$subject = "Notificación de solicitud reabierta";
+		$to = $email;
+		$subject = "Notificación de solicitud desplegada";
 
 		$message = "
 		<html>
 		<head>
-		<title>Se ha reabierto una solicitud</title>
+		<title>Se ha desplegado tu solicitud</title>
 		</head>
 		<body>
-		<h3>Una solicitud ha sido reabierta por el siguiente motivo: </h3>
-		<h4>$motivo</h4>
-		<h2>Si quieres cambiar el estado, pulsa:
+		<h3>Tu solicitud o una de tus solicitudes ha sido desplegada.</h3>
+		<h2>Para conocer más sobre el estado de tu solicitud, pulsa:
 		<a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>Aquí</a></h2>
 		</body>
 		</html>

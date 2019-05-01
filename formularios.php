@@ -143,10 +143,10 @@ function form_solicitud(){
                 foreach($resultsLab as $resultLab) {
                     if($idioma == $euskera){
                         //echo '<option value="' . $resultLab->id . '">' . $resultLab->nombre_eus . '</option>';
-                        echo '<input type="checkbox" name="aula[]" value="' . $resultLab->id . '">&nbsp;' . $resultLab->nombre_eus . '&nbsp;</input>' ;
+                        echo '<input type="checkbox" name="aula[]" value="' . $resultLab->id . '">&nbsp;' . $resultLab->nombre_eus . '&nbsp;&nbsp;&nbsp;&nbsp;</input>' ;
                     }else{
                         //echo '<option value="' . $resultLab->id . '">' . $resultLab->nombre . '</option>';
-                        echo '<input type="checkbox" name="aula[]" value="' . $resultLab->id . '">&nbsp;' . $resultLab->nombre. '&nbsp;</input>' ;
+                        echo '<input type="checkbox" name="aula[]" value="' . $resultLab->id . '">&nbsp;' . $resultLab->nombre. '&nbsp;&nbsp;&nbsp;&nbsp;</input>' ;
                     }
                 }
 
@@ -383,4 +383,61 @@ function form_asignatura(){
         }
     </script>';
     }
+
+function form_cargar_csv(){
+    echo '<form id="fcsv" name="fcsv" action="" method="post" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>
+                '.obtenerTraduccion("csvCargar").':
+            </td>
+            <td width="70%">
+                <input type="file" name="fileToUpload" id="fileToUpload">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="send" name="send" value="'.obtenerTraduccion("cargar").'" onclick="cargarCsv()">
+            </td>
+            <td>
+                <p id="mensaje"></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                '.obtenerTraduccion("avisoCargarCsv").'
+            </td>
+        </tr>
+    </table>
+    </form>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        function cargarCsv(){
+
+            var nombre = $("#fcsv").get(0);
+            $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
+
+            $.ajax({
+                url: "/wp-content/plugins/solicitudes/funciones/cargarCsv.php",
+                type: "POST",
+                data: new FormData(nombre),
+                dataType: "json",
+                mimeType: "multipart/form-data",
+                processData: false,
+                contentType: false,
+            }).done(function (data) {
+                    $("#mensaje").html(data["responseText"]);
+                    $("#fasig")[0].reset();
+                }
+            ).fail(function (data) {
+                    $("#mensaje").html(data["responseText"]);
+                    $("#fasig")[0].reset();
+                }
+            );
+        }
+    </script>';
+}
 ?>

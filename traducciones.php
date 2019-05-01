@@ -430,6 +430,14 @@ function obtenerTraduccion($str)
             }
             break;
 
+        case 'desplegar':
+            if ($idioma == $euskera) {
+                return "Zabaldu";
+            } else {
+                return "Desplegar";
+            }
+            break;
+
         case 'motivo':
             if ($idioma == $euskera) {
                 return "Arrazoia";
@@ -443,6 +451,54 @@ function obtenerTraduccion($str)
                 return "Ez da arrazoia bete.";
             } else {
                 return "No se ha introducido el motivo.";
+            }
+            break;
+
+        case 'csvCargar':
+            if ($idioma == $euskera) {
+                return "Kargatzeko CSV-a";
+            } else {
+                return "CSV a cargar";
+            }
+            break;
+
+        case 'avisoCargarCsv':
+            if ($idioma == $euskera) {
+                return "Kontuz: CSV bat kargatzerakoan aurreko datu guztiak ezabatuko dira.";
+            } else {
+                return "Aviso: al cargar un CSV se borrarán todos los datos anteriores.";
+            }
+            break;
+
+        case 'cargar':
+            if ($idioma == $euskera) {
+                return "Kargatu";
+            } else {
+                return "Cargar";
+            }
+            break;
+
+        case 'imagenes':
+            if ($idioma == $euskera) {
+                return "Irudiak";
+            } else {
+                return "Imágenes";
+            }
+            break;
+
+        case 'laboratorios':
+            if ($idioma == $euskera) {
+                return "Laborategiak";
+            } else {
+                return "Laboratorios";
+            }
+            break;
+
+        case 'puestos':
+            if ($idioma == $euskera) {
+                return "Postuak";
+            } else {
+                return "Puestos";
             }
             break;
     }
