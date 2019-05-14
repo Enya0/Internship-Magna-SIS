@@ -109,7 +109,6 @@ function form_solicitud(){
     $euskera = 'eu';
     global $wpdb;
     $results = $wpdb->get_results('SELECT id, nombre, nombre_eus FROM ' . $wpdb->prefix . 'asignatura_solicitudes');
-    $resultsLab = $wpdb->get_results('SELECT id, nombre, nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes');
     $resultsSO = $wpdb->get_results('SELECT id, nombre FROM ' . $wpdb->prefix . 'so_solicitudes');
     echo '<div id="formulario"><form id="fsolicitud" name="fsolicitud" action="" method="post" enctype="multipart/form-data">
     <input type="text" value="'.$current_user->user_email.'" name="email" style="visibility: hidden;"/>
@@ -131,26 +130,6 @@ function form_solicitud(){
                 }
 
                 echo'</select>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                '.obtenerTraduccion("nombreLabAula").'*:
-            </td>
-            <td>
-                '; //<select name="aula">
-
-                foreach($resultsLab as $resultLab) {
-                    if($idioma == $euskera){
-                        //echo '<option value="' . $resultLab->id . '">' . $resultLab->nombre_eus . '</option>';
-                        echo '<input type="checkbox" name="aula[]" value="' . $resultLab->id . '">&nbsp;' . $resultLab->nombre_eus . '&nbsp;&nbsp;&nbsp;&nbsp;</input>' ;
-                    }else{
-                        //echo '<option value="' . $resultLab->id . '">' . $resultLab->nombre . '</option>';
-                        echo '<input type="checkbox" name="aula[]" value="' . $resultLab->id . '">&nbsp;' . $resultLab->nombre. '&nbsp;&nbsp;&nbsp;&nbsp;</input>' ;
-                    }
-                }
-
-                echo'
             </td>
         </tr>
         <tr>
@@ -183,7 +162,25 @@ function form_solicitud(){
             </td>
         </tr>
     </table>
-    </form></div>
+    </form>';
+
+    $resultsAnteriores = $wpdb->get_results('SELECT id FROM ' . $wpdb->prefix . 'solicitud_solicitudes WHERE email=\'' . $current_user->user_email . '\'');
+
+    echo '<form id="fanterior" name="fanterior" action="" method="post" enctype="multipart/form-data">
+        <input type="text" value="'.$current_user->user_email.'" name="email" style="visibility: hidden;"/>
+
+        <table><tr><td>'. obtenerTraduccion('repetirSolicitudAnterior') . ': </td><td width="70%">
+                <select name="id_solicitud">';
+
+    foreach($resultsAnteriores as $resultsAnterior) {
+        echo '<option value="' . $resultsAnterior->id . '">' . $resultsAnterior->id . '</option>';
+    }
+
+    echo '</select></td></tr><tr><td> 
+        <input type="button" id="anterior" name="anterior" value="'.obtenerTraduccion("solicitudAnterior").'" onclick="solicitudAnterior()">
+        </td></tr></table></form>';
+
+    echo '</div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -220,6 +217,39 @@ function form_solicitud(){
             }
             );
         }
+        
+        function solicitudAnterior(){
+
+            var solicitud = $("#fanterior").get(0);
+            $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
+            
+            $.ajax({
+                url: "/wp-content/plugins/solicitudes/funciones/solicitud/repetirSolicitud.php",
+                type: "POST",
+                data: new FormData(solicitud),
+                dataType: "json",
+                mimeType: "multipart/form-data",
+                processData: false,
+                contentType: false,
+            }).done(function (data) {
+                if(data.status == "0"){
+                    $("#mensaje").html(data.msg);
+                    $("#fanterior")[0].reset();
+                }else{
+                    $("#formulario").html(data.msg);
+                }
+            }
+            ).fail(function (data) {
+                if(data.status == "0"){
+                    $("#mensaje").html(data.msg);
+                    $("#fanterior")[0].reset();
+                }else{
+                    $("#formulario").html(data.msg);
+                }
+            }
+            );
+        }
+        
         
         function enviarSolicitud(){
 

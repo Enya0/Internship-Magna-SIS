@@ -86,6 +86,7 @@ function solicitudes_activate(){
 	          nombre text NOT NULL,
 	          version text NOT NULL,
 	          notas text NOT NULL,
+	          imagen text NOT NULL,
 	          UNIQUE KEY id (id)
 	     ) $charset_collate;";
 	     dbDelta( $sql );
@@ -162,30 +163,6 @@ function solicitudes_activate(){
 	     dbDelta( $sql );
 
 
-	     $table_name = $wpdb->prefix.'software_aula_solicitudes';
-	     $charset_collate = $wpdb->get_charset_collate();
-
-	     $sql = "CREATE TABLE $table_name (
-	          id mediumint(9) NOT NULL AUTO_INCREMENT,
-	          id_software mediumint(9) NOT NULL,
-	          id_aula mediumint(9) NOT NULL,
-	          UNIQUE KEY id (id)
-	     ) $charset_collate;";
-	     dbDelta( $sql );
-
-
-	     $table_name = $wpdb->prefix.'software_asignatura_solicitudes';
-	     $charset_collate = $wpdb->get_charset_collate();
-
-	     $sql = "CREATE TABLE $table_name (
-	          id mediumint(9) NOT NULL AUTO_INCREMENT,
-	          id_software mediumint(9) NOT NULL,
-	          id_asignatura mediumint(9) NOT NULL,
-	          UNIQUE KEY id (id)
-	     ) $charset_collate;";
-	     dbDelta( $sql );
-
-
 	     $table_name = $wpdb->prefix.'software_so_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
 
@@ -224,6 +201,8 @@ include( 'wp-content/plugins/solicitudes/verSolicitud.php' );
 
 include( 'wp-content/plugins/solicitudes/verLaboratorios.php' );
 
+include( 'wp-content/plugins/solicitudes/verHWLaboratorio.php' );
+
 add_shortcode('form_incidencias', 'form_incidencias');
 
 add_shortcode('form_solicitud', 'form_solicitud');
@@ -241,5 +220,7 @@ add_shortcode('ver_incidencias', 'ver_incidencias');
 add_shortcode('ver_solicitud', 'ver_solicitud');
 
 add_shortcode('ver_laboratorios', 'ver_laboratorios');
+
+add_shortcode('ver_hw_laboratorio', 'ver_hw_laboratorio');
 
 ?>

@@ -6,16 +6,10 @@
 	include_once $path . '/wp-load.php';
 
 	$asignatura = $_POST['asig'];
-	$aula = $_POST['aula'];
 	$sistemaOperativo = $_POST['sistOp'];
 	$nSoftware = $_POST['nSoftware'];
 
-
-	if(sizeof($aula) == 0){
-        $return = array('status'=>0, 'msg'=>obtenerTraduccion("erAulaValida"));
-        echo json_encode($return);
-	}
-	elseif(sizeof($sistemaOperativo) == 0){
+	if(sizeof($sistemaOperativo) == 0){
         $return = array('status'=>0, 'msg'=>obtenerTraduccion("erSistemaOperativoValido"));
         echo json_encode($return);
 	}
@@ -27,7 +21,6 @@
 	    $msg = '<form id="fprogramas" name="fprogramas" action="" method="post" enctype="multipart/form-data">
         <input type="text" value="'.$asignatura.'" name="asig" style="visibility: hidden;"/>
                 <input type="text" value="'.$_POST['email'].'" name="email" style="visibility: hidden;"/>
-        <input type="text" value="'.implode(",",$aula).'" name="aula" style="visibility: hidden;"/>
         <input type="text" value="'.implode(",",$sistemaOperativo).'" name="sistOp" style="visibility: hidden;"/>
         <input type="text" value="'.$nSoftware.'" name="nSoftware" style="visibility: hidden;"/>';
 
@@ -64,6 +57,7 @@
             <tr>
                 <td>
                     <input type="button" id="send" name="send" value="'.obtenerTraduccion("enviar").'" onclick="enviarSolicitud()">
+                    <input type="button" id="back" name="back" value="'.obtenerTraduccion("volver").'" onclick="volverSolicitud()">
                 </td>
                 <td width="100%">
                     <p id="mensaje"></p>

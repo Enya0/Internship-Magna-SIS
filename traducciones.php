@@ -501,6 +501,62 @@ function obtenerTraduccion($str)
                 return "Puestos";
             }
             break;
+
+        case 'volver':
+            if ($idioma == $euskera) {
+                return "Atzera";
+            } else {
+                return "Volver";
+            }
+            break;
+
+        case 'solicitudAnterior':
+            if ($idioma == $euskera) {
+                return "Iazko eskaera";
+            } else {
+                return "Solicitud anterior";
+            }
+            break;
+
+        case 'repetirSolicitudAnterior':
+            if ($idioma == $euskera) {
+                return "Iazko eskaera errepikatu";
+            } else {
+                return "Repetir solicitud anterior";
+            }
+            break;
+
+        case 'procesador':
+            if ($idioma == $euskera) {
+                return "Prozesadorea";
+            } else {
+                return "Procesador";
+            }
+            break;
+
+        case 'grafica':
+            if ($idioma == $euskera) {
+                return "Txartel grafikoa";
+            } else {
+                return "Tarjeta gráfica";
+            }
+            break;
+
+        case 'idioma':
+            if ($idioma == $euskera) {
+                return "Hizkuntza";
+            } else {
+                return "Idioma";
+            }
+            break;
+
+        case 'antiguedad':
+            if ($idioma == $euskera) {
+                return "Antzinatea";
+            } else {
+                return "Antigüedad";
+            }
+            break;
     }
 }
 
