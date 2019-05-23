@@ -201,6 +201,8 @@ include( 'wp-content/plugins/solicitudes/verIncidencias.php' );
 
 include( 'wp-content/plugins/solicitudes/verSolicitud.php' );
 
+include( 'wp-content/plugins/solicitudes/verSolicitudes.php' );
+
 include( 'wp-content/plugins/solicitudes/verLaboratorios.php' );
 
 include( 'wp-content/plugins/solicitudes/verHWLaboratorio.php' );
@@ -222,6 +224,8 @@ add_shortcode('ver_incidencia', 'ver_incidencia');
 add_shortcode('ver_incidencias', 'ver_incidencias');
 
 add_shortcode('ver_solicitud', 'ver_solicitud');
+
+add_shortcode('ver_solicitudes', 'ver_solicitudes');
 
 add_shortcode('ver_laboratorios', 'ver_laboratorios');
 
