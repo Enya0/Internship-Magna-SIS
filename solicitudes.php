@@ -139,18 +139,6 @@ function solicitudes_activate(){
 	     dbDelta( $sql );
 
 
-	     $table_name = $wpdb->prefix.'solicitud_aula_solicitudes';
-	     $charset_collate = $wpdb->get_charset_collate();
-
-	     $sql = "CREATE TABLE $table_name (
-	          id mediumint(9) NOT NULL AUTO_INCREMENT,
-			  id_solicitud mediumint(9) NOT NULL,
-	          id_aula mediumint(9) NOT NULL,
-	          UNIQUE KEY id (id)
-	     ) $charset_collate;";
-	     dbDelta( $sql );
-
-
 	     $table_name = $wpdb->prefix.'solicitud_so_solicitudes';
 	     $charset_collate = $wpdb->get_charset_collate();
 
