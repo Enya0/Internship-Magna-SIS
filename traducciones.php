@@ -102,6 +102,14 @@ function obtenerTraduccion($str)
             }
             break;
 
+        case 'notas':
+            if ($idioma == $euskera) {
+                return "Notak";
+            } else {
+                return "Notas";
+            }
+            break;
+
         case 'infoAdicional':
             if ($idioma == $euskera) {
                 return "Informazio gehigarria (url-a, oharrak, lizentzia, pluginak...)";
@@ -581,6 +589,15 @@ function obtenerTraduccion($str)
                 return "Abrir";
             }
             break;
+
+        case 'verSolicitud':
+            if ($idioma == $euskera) {
+                return "Eskaera ikusi";
+            } else {
+                return "Ver solicitud";
+            }
+            break;
+
     }
 }
 
