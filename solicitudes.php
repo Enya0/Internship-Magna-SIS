@@ -185,7 +185,21 @@ function solicitudes_activate(){
 	          UNIQUE KEY id (id)
 	     ) $charset_collate;";
 	     dbDelta( $sql );
-	}
+
+
+        $table_name = $wpdb->prefix.'abierto_solicitudes';
+        $charset_collate = $wpdb->get_charset_collate();
+
+        $sql = "CREATE TABLE $table_name (
+	          id mediumint(9) NOT NULL AUTO_INCREMENT,
+	          abierto mediumint(9) NOT NULL,
+	          UNIQUE KEY id (id)
+	     ) $charset_collate;";
+        dbDelta( $sql );
+
+        $wpdb->insert($wpdb->prefix . 'abierto_solicitudes',array('abierto'=>1),array('%s'));
+
+    }
 
 }
 
@@ -202,6 +216,8 @@ include( 'wp-content/plugins/solicitudes/verSolicitud.php' );
 include( 'wp-content/plugins/solicitudes/verLaboratorios.php' );
 
 include( 'wp-content/plugins/solicitudes/verHWLaboratorio.php' );
+
+include( 'wp-content/plugins/solicitudes/configuraciones.php' );
 
 add_shortcode('form_incidencias', 'form_incidencias');
 
@@ -222,5 +238,7 @@ add_shortcode('ver_solicitud', 'ver_solicitud');
 add_shortcode('ver_laboratorios', 'ver_laboratorios');
 
 add_shortcode('ver_hw_laboratorio', 'ver_hw_laboratorio');
+
+add_shortcode('configuraciones', 'configuraciones');
 
 ?>

@@ -557,6 +557,30 @@ function obtenerTraduccion($str)
                 return "Antigüedad";
             }
             break;
+
+        case 'noAbierto':
+            if ($idioma == $euskera) {
+                return "Eskaera epea itxita dago";
+            } else {
+                return "El periodo de solicitudes está cerrado";
+            }
+            break;
+
+        case 'estadoSolicitudes':
+            if ($idioma == $euskera) {
+                return "Eskaeren egoera";
+            } else {
+                return "Estado de las solicitudes";
+            }
+            break;
+
+        case 'abrir':
+            if ($idioma == $euskera) {
+                return "Iriki";
+            } else {
+                return "Abrir";
+            }
+            break;
     }
 }
 
