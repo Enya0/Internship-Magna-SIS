@@ -209,6 +209,8 @@ include( 'wp-content/plugins/solicitudes/verHWLaboratorio.php' );
 
 include( 'wp-content/plugins/solicitudes/configuraciones.php' );
 
+include( 'wp-content/plugins/solicitudes/software.php' );
+
 add_shortcode('form_incidencias', 'form_incidencias');
 
 add_shortcode('form_solicitud', 'form_solicitud');
@@ -232,5 +234,7 @@ add_shortcode('ver_laboratorios', 'ver_laboratorios');
 add_shortcode('ver_hw_laboratorio', 'ver_hw_laboratorio');
 
 add_shortcode('configuraciones', 'configuraciones');
+
+add_shortcode('software', 'software');
 
 ?>

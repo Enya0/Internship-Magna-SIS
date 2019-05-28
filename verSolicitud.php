@@ -61,7 +61,7 @@ function ver_solicitud()
                         }
                     }
 
-                    $results_so = $wpdb->get_results('SELECT nombre FROM ' . $wpdb->prefix . 'so_solicitudes WHERE id IN (SELECT id_so FROM ' . $wpdb->prefix . 'solicitud_so_solicitudes WHERE id_solicitud=' . $id_solicitud . ')');
+                    $results_so = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'so_solicitudes WHERE id IN (SELECT id_so FROM ' . $wpdb->prefix . 'solicitud_so_solicitudes WHERE id_solicitud=' . $id_solicitud . ')');
 
                     $nombres_so = [];
                     $ids_so = [];
@@ -209,17 +209,17 @@ function ver_solicitud()
                                     $role = $roles[0];
                                     if ($role == 'administrator') {
                                         echo '<button id="botonDesplegar" onclick="cambiarEstado(5,'.$result_software->id.')">' . obtenerTraduccion("desplegar") . '</button>';
-                                        echo '<button id="insertarSW" onclick="insertarSoftware('.$result_software->nombre.', '.$result_software->version.', , '.$result_software->notas.', '.implode(",", $ids_so).')">' . obtenerTraduccion("desplegar") . '</button>';
+                                        echo '<button id="insertarSW" onclick="insertarSoftware('.$result_software->nombre.', '.$result_software->version.', '.$result_software->notas.', '.implode(",", $ids_so).')">' . obtenerTraduccion("insertarSW") . '</button>';
                                     }
                                 }
                                 break;
-                            default:
+                            case '5':
                                 if (is_user_logged_in()) {
                                     $user = wp_get_current_user();
                                     $roles = ( array )$user->roles;
                                     $role = $roles[0];
                                     if ($role == 'administrator') {
-                                        echo '<button id="insertarSW" onclick="insertarSoftware('.$result_software->nombre.', '.$result_software->version.', , '.$result_software->notas.', '.implode(",", $ids_so).')">' . obtenerTraduccion("desplegar") . '</button>';
+                                        echo '<button id="insertarSW" onclick="insertarSoftware("'.$result_software->nombre.'", "'.$result_software->version.'", "'.$result_software->notas.'", "'.implode(",", $ids_so).'")">' . obtenerTraduccion("insertarSW") . '</button>';
                                     }
                                 }
                                 break;
@@ -323,7 +323,8 @@ function ver_solicitud()
                 }
                 
                 function insertarSoftware(nombre, version, notas, so){
-                     window.location.href = "/insertar-software?nombre=" + nombre + "&version=" +version+ "&notas=" +notas+ "&sistOp=" +so;
+                    console.log("entra");
+                    window.location.href = "/insertar-software?nombre=" + nombre + "&version=" +version+ "&notas=" +notas+ "&sistOp=" +so + "";
                 }
             </script>';
             } else {

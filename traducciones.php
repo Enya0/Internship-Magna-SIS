@@ -166,6 +166,14 @@ function obtenerTraduccion($str)
             }
             break;
 
+        case 'insertarSW':
+            if ($idioma == $euskera) {
+                return "Software-a sartu";
+            } else {
+                return "Insertar software";
+            }
+            break;
+
         case 'erEmailIncorrecto':
             if ($idioma == $euskera) {
                 return "Sartutako email-a ez da zuzena.";
