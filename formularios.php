@@ -132,11 +132,31 @@ function form_solicitud(){
                             <td width="70%">
                                 <select name="asig">';
 
-                        foreach ($results as $result) {
-                            if ($idioma == $euskera) {
-                                echo '<option value="' . $result->id . '">' . $result->nombre_eus . '</option>';
-                            } else {
-                                echo '<option value="' . $result->id . '">' . $result->nombre . '</option>';
+                        if(isset($_GET['asig'])){
+                            $id = $_GET['asig'];
+                            foreach ($results as $result) {
+                                if($result->id == $id){
+                                    if ($idioma == $euskera) {
+                                        echo '<option value="' . $result->id . '" selected>' . $result->nombre_eus . '</option>';
+                                    } else {
+                                        echo '<option value="' . $result->id . '" selected>' . $result->nombre . '</option>';
+                                    }
+                                }else{
+                                    if ($idioma == $euskera) {
+                                        echo '<option value="' . $result->id . '">' . $result->nombre_eus . '</option>';
+                                    } else {
+                                        echo '<option value="' . $result->id . '">' . $result->nombre . '</option>';
+                                    }
+                                }
+
+                            }
+                        }else{
+                            foreach ($results as $result) {
+                                if ($idioma == $euskera) {
+                                    echo '<option value="' . $result->id . '">' . $result->nombre_eus . '</option>';
+                                } else {
+                                    echo '<option value="' . $result->id . '">' . $result->nombre . '</option>';
+                                }
                             }
                         }
 
@@ -148,9 +168,19 @@ function form_solicitud(){
                                 ' . obtenerTraduccion("sistemaOperativo") . '*: 
                             </td>
                             <td>';
-
-                        foreach ($resultsSO as $resultSO) {
-                            echo '<input type="checkbox" name="sistOp[]" value="' . $resultSO->id . '">&nbsp;' . $resultSO->nombre . '</imput><br/>';
+                        if(isset($_GET['sistOp'])){
+                            $sistemasOperativos = explode(",", $_GET['sistOp']);
+                            foreach ($resultsSO as $resultSO) {
+                                if(in_array($resultSO->id, $sistemasOperativos)){
+                                    echo '<input type="checkbox" name="sistOp[]" value="' . $resultSO->id . '" checked>&nbsp;' . $resultSO->nombre . '</imput><br/>';
+                                }else{
+                                    echo '<input type="checkbox" name="sistOp[]" value="' . $resultSO->id . '">&nbsp;' . $resultSO->nombre . '</imput><br/>';
+                                }
+                            }
+                        }else{
+                            foreach ($resultsSO as $resultSO) {
+                                echo '<input type="checkbox" name="sistOp[]" value="' . $resultSO->id . '">&nbsp;' . $resultSO->nombre . '</imput><br/>';
+                            }
                         }
 
                         echo '</td>
@@ -159,9 +189,13 @@ function form_solicitud(){
                             <td>
                                 ' . obtenerTraduccion("nSoftware") . '*: 
                             </td>
-                            <td>
-                                <input type="number" id="nSoftware" name="nSoftware" class="texto-form">
-                            </td>
+                            <td>';
+                        if(isset($_GET['nSoftware'])){
+                            echo '<input type="number" id="nSoftware" name="nSoftware" class="texto-form" value="'.$_GET['nSoftware'].'">';
+                        }else{
+                            echo '<input type="number" id="nSoftware" name="nSoftware" class="texto-form">';
+                        }
+                            echo '</td>
                         </tr>
                 
                         <tr>
@@ -260,8 +294,7 @@ function form_solicitud(){
                             }
                             );
                         }
-                        
-                        
+
                         function enviarSolicitud(){
                 
                             var solicitud = $("#fprogramas").get(0);
