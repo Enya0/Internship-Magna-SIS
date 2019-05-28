@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9906f13-504d-4a01-9d07-0af1f34b4826" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/solicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/solicitudes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traducciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/traducciones.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/verSolicitud.php" beforeDir="false" afterPath="$PROJECT_DIR$/verSolicitud.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/verSolicitud.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="706">
-              <caret line="327" column="17" lean-forward="true" selection-start-line="327" selection-start-column="17" selection-end-line="327" selection-end-column="17" />
+            <state relative-caret-position="263">
+              <caret line="221" column="227" selection-start-line="221" selection-start-column="227" selection-end-line="221" selection-end-column="227" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
@@ -296,12 +294,12 @@
       <workItem from="1557842960519" duration="6433000" />
       <workItem from="1558618533329" duration="2499000" />
       <workItem from="1558685109874" duration="7000" />
-      <workItem from="1559028314769" duration="7151000" />
+      <workItem from="1559028314769" duration="7587000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55095000" />
+    <option name="totallyTimeSpent" value="55531000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -592,8 +590,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/verSolicitud.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="327" column="17" lean-forward="true" selection-start-line="327" selection-start-column="17" selection-end-line="327" selection-end-column="17" />
+        <state relative-caret-position="263">
+          <caret line="221" column="227" selection-start-line="221" selection-start-column="227" selection-end-line="221" selection-end-column="227" />
           <folding>
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />

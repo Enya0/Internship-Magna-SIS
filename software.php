@@ -59,7 +59,7 @@ function software(){
                                     $("#mensaje").html(data.msg);
                                     $("#fsolicitud")[0].reset();
                                 }else{
-                                    $("#formulario").html(data.msg);
+                                    $("#mensaje").html(data.msg);
                                 }
                             }
                             ).fail(function (data) {
@@ -67,7 +67,7 @@ function software(){
                                     $("#mensaje").html(data.msg);
                                     $("#fsolicitud")[0].reset();
                                 }else{
-                                    $("#formulario").html(data.msg);
+                                    $("#mensaje").html(data.msg);
                                 }
                             }
                             );

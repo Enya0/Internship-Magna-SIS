@@ -209,7 +209,7 @@ function ver_solicitud()
                                     $role = $roles[0];
                                     if ($role == 'administrator') {
                                         echo '<button id="botonDesplegar" onclick="cambiarEstado(5,'.$result_software->id.')">' . obtenerTraduccion("desplegar") . '</button>';
-                                        echo '<button id="insertarSW" onclick="insertarSoftware('.$result_software->nombre.', '.$result_software->version.', '.$result_software->notas.', '.implode(",", $ids_so).')">' . obtenerTraduccion("insertarSW") . '</button>';
+                                        echo '<button id="insertarSW" onclick="insertarSoftware(\''.$result_software->nombre.'\', \''.$result_software->version.'\', \''.$result_software->notas.'\', \''.implode(",", $ids_so).'\');">' . obtenerTraduccion("insertarSW") . '</button>';
                                     }
                                 }
                                 break;
@@ -219,7 +219,7 @@ function ver_solicitud()
                                     $roles = ( array )$user->roles;
                                     $role = $roles[0];
                                     if ($role == 'administrator') {
-                                        echo '<button id="insertarSW" onclick="insertarSoftware("'.$result_software->nombre.'", "'.$result_software->version.'", "'.$result_software->notas.'", "'.implode(",", $ids_so).'")">' . obtenerTraduccion("insertarSW") . '</button>';
+                                        echo '<button id="insertarSW" onclick="insertarSoftware(\''.$result_software->nombre.'\', \''.$result_software->version.'\', \''.$result_software->notas.'\', \''.implode(",", $ids_so).'\');">' . obtenerTraduccion("insertarSW") . '</button>';
                                     }
                                 }
                                 break;
@@ -323,7 +323,6 @@ function ver_solicitud()
                 }
                 
                 function insertarSoftware(nombre, version, notas, so){
-                    console.log("entra");
                     window.location.href = "/insertar-software?nombre=" + nombre + "&version=" +version+ "&notas=" +notas+ "&sistOp=" +so + "";
                 }
             </script>';
