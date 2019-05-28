@@ -637,6 +637,22 @@ function obtenerTraduccion($str)
                 return "Ver";
             }
             break;
+
+        case 'editar':
+            if ($idioma == $euskera) {
+                return "Editatu";
+            } else {
+                return "Editar";
+            }
+            break;
+
+        case 'editarSoftware':
+            if ($idioma == $euskera) {
+                return "Software-a editatu";
+            } else {
+                return "Editar software";
+            }
+            break;
     }
 }
 

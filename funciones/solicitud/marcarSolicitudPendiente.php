@@ -9,7 +9,7 @@ if(isset($_POST['pagina']) && isset($_POST['idSoftware']) && isset($_POST['email
     if($pagina == 0){
 
         echo '<form id="fmotivo"><input type="text" id="idSoftware" name="idSoftware" style="visibility: hidden;" value="'
-            . $_POST['idSoftware'].'"><table><tr><td>';
+            . $_POST['idSoftware'].'"><table bgcolor="#FFFFFF"><tr><td>';
         echo obtenerTraduccion('mensaje') . '*:';
         echo '</td><td width="70%"><input type="text" id="motivo" name="motivo" class="texto-form">';
         echo '</td></tr>

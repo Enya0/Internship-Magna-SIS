@@ -10,7 +10,7 @@ function configuraciones(){
             $results = $wpdb->get_results('SELECT abierto FROM ' . $wpdb->prefix . 'abierto_solicitudes');
 
 
-            echo '<table>
+            echo '<table bgcolor="#FFFFFF">
             <tr>
             <td>'.obtenerTraduccion('estadoSolicitudes').'</td>
             <td width="70%">';
@@ -27,21 +27,28 @@ function configuraciones(){
             <tr>
             <td>'.obtenerTraduccion('laboratorios').'</td>
             <td width="70%">';
-            echo '<a href="/ver-hw-laboratorios">'.obtenerTraduccion('ver').'</a>';
+            echo '<button id="botonLab" onclick="verLab()">'.obtenerTraduccion('ver').'</button>';
             echo '
             </td>
             </tr>
             <tr>
             <td>'.obtenerTraduccion('verSolicitudes').'</td>
             <td width="70%">';
-            echo '<a href="/ver-solicitudes">'.obtenerTraduccion('ver').'</a>';
+            echo '<button id="botonSolicitudes" onclick="verSolicitudes()">'.obtenerTraduccion('ver').'</button>';
             echo '
             </td>
             </tr>
             <tr>
             <td>'.obtenerTraduccion('verIncidencias').'</td>
             <td width="70%">';
-            echo '<a href="/ver-incidencias">'.obtenerTraduccion('ver').'</a>';
+            echo '<button id="botonIncidencias" onclick="verIncidencias()">'.obtenerTraduccion('ver').'</button>';
+            echo '
+            </td>
+            </tr>
+            <tr>
+            <td>'.obtenerTraduccion('editarSoftware').'</td>
+            <td width="70%">';
+            echo '<button id="botonSoftware" onclick="verSoftware()">'.obtenerTraduccion('editar').'</button>';
             echo '
             </td>
             </tr>
@@ -49,6 +56,19 @@ function configuraciones(){
 
             echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
             <script type="text/javascript">
+            function verLab(){
+                window.location.href = "/ver-hw-laboratorios";
+            }
+            function verSolicitudes(){
+                window.location.href = "/ver-solicitudes";
+            }
+            function verIncidencias(){
+                window.location.href = "/ver-incidencias";
+            }
+            function verSoftware(){
+                window.location.href = "/ver-software";
+            }
+            
             function cambiarSolicitudes(){
                 $.ajax({
                     url: "/wp-content/plugins/solicitudes/funciones/cambiarSolicitudes.php",

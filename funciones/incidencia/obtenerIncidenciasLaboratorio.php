@@ -11,7 +11,7 @@ if (isset($_POST['id_aula'])) {
 
     $results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'incidencia_solicitudes WHERE id_aula=' . $id_aula . ' ORDER BY (id) DESC');
 
-    echo '<br/><table>
+    echo '<br/><table bgcolor="#FFFFFF">
             <tr>
                 <th>' . obtenerTraduccion("incidencia") . '</th>
                 <th>' . obtenerTraduccion("registradaPor") . '</th>

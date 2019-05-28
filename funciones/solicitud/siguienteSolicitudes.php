@@ -25,7 +25,7 @@
         <input type="text" value="'.$nSoftware.'" name="nSoftware" style="visibility: hidden;"/>';
 
 	    for($i = 0; $i < $nSoftware; $i++){
-	        $msg = $msg . '<table>
+	        $msg = $msg . '<table bgcolor="#FFFFFF">
                 <tr>
                     <td>
                         '.obtenerTraduccion("nombrePrograma").'*: 

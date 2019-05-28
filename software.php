@@ -24,7 +24,7 @@ function software(){
                 global $wpdb;
 
                 $results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'aula_solicitudes');
-                echo '<table><tr><td>'. obtenerTraduccion('nombreLabAula') .'</td>';
+                echo '<table bgcolor="#FFFFFF"><tr><td>'. obtenerTraduccion('nombreLabAula') .'</td>';
                 echo '<td width="70%">';
                 foreach ($results as $result){
                     if ($idioma == $euskera) {

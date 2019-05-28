@@ -5,7 +5,7 @@ function form_incidencias(){
     $euskera = 'eu';
     $results = $wpdb->get_results('SELECT id, nombre, nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes');
     echo '<form id="fincidencias" name="fincidencias" action="" method="post" enctype="multipart/form-data">
-    <table>
+    <table bgcolor="#FFFFFF">
         <tr>
             <td>
                 '.obtenerTraduccion("email").'*:  
@@ -124,7 +124,7 @@ function form_solicitud(){
                     echo '<div id="formulario"><form id="fsolicitud" name="fsolicitud" action="" method="post" enctype="multipart/form-data">
                     <input type="text" value="' . $current_user->user_email . '" name="email" style="visibility: hidden;"/>
                 
-                    <table>
+                    <table bgcolor="#FFFFFF">
                         <tr>
                             <td>
                                 ' . obtenerTraduccion("asignatura") . '*:  
@@ -214,7 +214,7 @@ function form_solicitud(){
                         echo '<form id="fanterior" name="fanterior" action="" method="post" enctype="multipart/form-data">
                         <input type="text" value="' . $current_user->user_email . '" name="email" style="visibility: hidden;"/>
                 
-                        <table><tr><td>' . obtenerTraduccion('repetirSolicitudAnterior') . ': </td><td width="70%">
+                        <table bgcolor="#FFFFFF"><tr><td>' . obtenerTraduccion('repetirSolicitudAnterior') . ': </td><td width="70%">
                                 <select name="id_solicitud">';
 
                         foreach ($resultsAnteriores as $resultsAnterior) {
@@ -345,7 +345,7 @@ function form_so(){
         $role = $roles[0];
         if($role == 'administrator'){
             echo '<form id="fso" name="fso" action="" method="post" enctype="multipart/form-data">
-            <table>
+            <table bgcolor="#FFFFFF">
                 <tr>
                     <td>
                         '.obtenerTraduccion("nombre").'*:
@@ -405,7 +405,7 @@ function form_asignatura(){
         $role = $roles[0];
         if($role == 'administrator'){
             echo '<form id="fasig" name="fasig" action="" method="post" enctype="multipart/form-data">
-            <table>
+            <table bgcolor="#FFFFFF">
                 <tr>
                     <td>
                         '.obtenerTraduccion("nombreCastellano").'*:
@@ -485,7 +485,7 @@ function form_cargar_csv(){
         $role = $roles[0];
         if($role == 'administrator'){
             echo '<form id="fcsv" name="fcsv" action="" method="post" enctype="multipart/form-data">
-            <table>
+            <table bgcolor="#FFFFFF">
                 <tr>
                     <td>
                         '.obtenerTraduccion("csvCargar").':

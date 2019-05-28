@@ -17,7 +17,7 @@ function ver_hw_laboratorio(){
 
     }
 
-    echo '<table><tr><th>'.obtenerTraduccion('nombre').'</th>
+    echo '<table bgcolor="#FFFFFF"><tr><th>'.obtenerTraduccion('nombre').'</th>
     <th>Memoria (MB)</th>
     <th>'.obtenerTraduccion('procesador').'</th>
     <th>'.obtenerTraduccion('grafica').'</th>

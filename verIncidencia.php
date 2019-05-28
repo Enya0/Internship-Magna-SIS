@@ -12,7 +12,7 @@ function ver_incidencia()
         foreach ($results as $result) {
 
             $idioma = get_locale();
-            echo '<table>
+            echo '<table bgcolor="#FFFFFF">
                         <tr>
                             <td>
                                 ' . obtenerTraduccion("incidencia") . ':

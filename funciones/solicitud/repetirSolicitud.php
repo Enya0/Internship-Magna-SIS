@@ -35,7 +35,7 @@
     $results4 = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'softwareSolicitud_solicitudes WHERE id_solicitud=' . $id_solicitud);
     $i = 0;
     foreach($results4 as $result4){
-        $msg = $msg . '<table>
+        $msg = $msg . '<table bgcolor="#FFFFFF">
             <tr>
                 <td>
                     '.obtenerTraduccion("nombrePrograma").'*: 

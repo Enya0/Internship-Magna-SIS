@@ -11,7 +11,7 @@ if(isset($_POST['lab']) && isset($_POST['so'])){
 
 
 
-    echo '<table><tr><th>'.obtenerTraduccion('nombre').'</th>
+    echo '<table bgcolor="#FFFFFF"><tr><th>'.obtenerTraduccion('nombre').'</th>
         <th>'.obtenerTraduccion('version').'</th>
         <th>'.obtenerTraduccion('notas').'</th></tr>';
 

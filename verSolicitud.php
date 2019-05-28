@@ -17,7 +17,7 @@ function ver_solicitud()
                 foreach ($results as $result) {
 
                     $idioma = get_locale();
-                    echo '<table>
+                    echo '<table bgcolor="#FFFFFF">
                                 <tr>
                                     <td>
                                         ' . obtenerTraduccion("solicitud") . ':
@@ -62,7 +62,7 @@ function ver_solicitud()
                     $results_software = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'softwareSolicitud_solicitudes WHERE id_solicitud=' . $id_solicitud);
 
                     foreach ($results_software as $result_software) {
-                        echo '<table>
+                        echo '<table bgcolor="#FFFFFF">
                                 <tr>
                                     <td>
                                         ' . obtenerTraduccion("nombrePrograma") . ':

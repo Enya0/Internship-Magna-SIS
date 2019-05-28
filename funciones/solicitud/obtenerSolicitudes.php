@@ -10,7 +10,7 @@ if (isset($_POST['id_asignatura'])) {
     global $wpdb;
 
     $results = $wpdb->get_results('SELECT id FROM ' . $wpdb->prefix . 'solicitud_solicitudes WHERE id_asignatura=' . $id_asignatura);
-    echo '<br/><table>
+    echo '<br/><table bgcolor="#FFFFFF">
                 <tr>
                     <th>' . obtenerTraduccion("solicitud") . '</th>
                     <th>' . obtenerTraduccion("nombre") . '</th>
