@@ -1,5 +1,5 @@
 <?php
-    include('../traducciones.php');
+include('../traducciones.php');
 
 
 

@@ -637,7 +637,6 @@ function obtenerTraduccion($str)
                 return "Ver";
             }
             break;
-
     }
 }
 

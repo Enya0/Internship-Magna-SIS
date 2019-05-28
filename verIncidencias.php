@@ -13,7 +13,7 @@ function ver_incidencias()
 
 
     foreach ($resultsLab as $result) {
-        if ($idioma == "eu_ES") {
+        if ($idioma == "eu") {
             echo '<option value="' . $result->id . '">' . $result->nombre_eus . '</option>';
         } else {
             echo '<option value="' . $result->id . '">' . $result->nombre . '</option>';

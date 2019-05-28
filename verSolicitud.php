@@ -43,21 +43,10 @@ function ver_solicitud()
                     $results_asig = $wpdb->get_results('SELECT nombre,nombre_eus FROM ' . $wpdb->prefix . 'asignatura_solicitudes WHERE id=' . $result->id_asignatura);
                     $nombre_asig = "";
                     foreach ($results_asig as $result_asig) {
-                        if ($idioma == "eu_ES") {
+                        if ($idioma == "eu") {
                             $nombre_asig = $result_asig->nombre_eus;
                         } else {
                             $nombre_asig = $result_asig->nombre;
-                        }
-                    }
-
-                    $results_aula = $wpdb->get_results('SELECT nombre,nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes WHERE id IN (SELECT id_aula FROM ' . $wpdb->prefix . 'solicitud_aula_solicitudes WHERE id_solicitud=' . $id_solicitud . ')');
-
-                    $nombres_aulas = [];
-                    foreach ($results_aula as $result_aula) {
-                        if ($idioma == "eu_ES") {
-                            array_push($nombres_aulas, $result_aula->nombre_eus);
-                        } else {
-                            array_push($nombres_aulas, $result_aula->nombre);
                         }
                     }
 
@@ -101,16 +90,6 @@ function ver_solicitud()
                                         <td>';
 
                         echo $result_software->notas;
-
-                        echo '</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            ' . obtenerTraduccion("nombreLabAula") . ':
-                                        </td>
-                                        <td>';
-
-                        echo implode(", ", $nombres_aulas);
 
                         echo '</td>
                                     </tr>

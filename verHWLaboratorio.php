@@ -9,7 +9,7 @@ function ver_hw_laboratorio(){
     $results_aula = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'aula_solicitudes WHERE id='. $id_lab);
 
     foreach ($results_aula as $result_aula) {
-        if($idioma == "eu_ES"){
+        if($idioma == "eu"){
             echo '<h4>Hardware '. $result_aula->nombre_eus .'</h4>';
         }else{
             echo '<h4>Hardware '. $result_aula->nombre .'</h4>';

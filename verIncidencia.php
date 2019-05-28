@@ -45,7 +45,7 @@ function ver_incidencia()
             $results_aula = $wpdb->get_results('SELECT nombre,nombre_eus FROM ' . $wpdb->prefix . 'aula_solicitudes WHERE id=' . $result->id_aula);
 
             foreach ($results_aula as $result_aula) {
-                if ($idioma == "eu_ES") {
+                if ($idioma == "eu") {
                     echo $result_aula->nombre_eus;
                 } else {
                     echo $result_aula->nombre;

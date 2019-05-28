@@ -81,7 +81,7 @@ function form_incidencias(){
             $("#mensaje").html("<img src=\'/wp-content/plugins/solicitudes/loading.gif\' width=\'50px\'>");
 
             $.ajax({
-                url: funciones/solicitud/enviarIncidencia.php
+                url: "/wp-content/plugins/solicitudes/funciones/incidencia/enviarIncidencia.php",
                 type: "POST",
                 data: new FormData(incidencia),
                 dataType: "json",
