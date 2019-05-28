@@ -68,13 +68,21 @@
         <tr>
             <td>
                 <input type="button" id="send" name="send" value="'.obtenerTraduccion("enviar").'" onclick="enviarSolicitud()">
-                <input type="button" id="back" name="back" value="'.obtenerTraduccion("volver").'" onclick="volverSolicitud()">
+                <br/><br/>
+                <input type="button" id="back" name="back" value="'.obtenerTraduccion("volver").'" onclick="volver()">
             </td>
             <td width="100%">
                 <p id="mensaje"></p>
             </td>
         </tr>
         </table></form>';
+
+    $msg = $msg . '<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+                    <script type="text/javascript">
+                    function volver(){
+                        window.location.href = "/solicitud?asig=' . $asignatura . '&sistOp=' .implode(",",$sistemaOperativo). '&nSoftware=' .$nSoftware. '";
+                    }
+                    </script>';
 
     $return = array('status'=>1, 'msg'=>$msg);
     echo json_encode($return);
