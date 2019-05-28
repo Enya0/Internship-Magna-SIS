@@ -6,18 +6,22 @@
 
 
 		$to = $email;
-		$subject = "Notificación de solicitud descartada";
+		$subject = "Baztertutako eskaera jakinarazpena / Notificación de solicitud descartada";
 
 		$message = "
 		<html>
-		<head>
-		<title>Se ha descartado tu solicitud</title>
-		</head>
 		<body>
-		<h3>Tu solicitud o una de tus solicitudes ha sido descartada por el siguiente motivo: </h3>
-		<h4>$motivo</h4>
-		<h2>Si no estás de acuerdo y quieres reabrir tu solicitud, pulsa:
-		<a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>Aquí</a></h2>
+		[EU]<br/>
+		Hurrengo arrazoiagatik zure eskaera edo zure eskaeretako bat baztertu da:<br/>
+		$motivo <br/>
+		Ados ez bazaude eta zure eskaera berriro zabaltzea nahi duzu, <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>hemen</a> sartu.<br/>
+		<br/>
+		----------------------------------------------------------<br/>
+		<br/>
+		[ES]<br/>
+		Tu solicitud o una de tus solicitudes ha sido descartada por el siguiente motivo:<br/>
+		$motivo <br/>
+		Si no estás de acuerdo y quieres reabrir tu solicitud, pulsa <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>aquí</a>.<br/>
 		</body>
 		</html>
 		";

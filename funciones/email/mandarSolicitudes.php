@@ -5,16 +5,21 @@
         include_once $path . '/wp-load.php';
 
 		$to = "enyamanina@gmail.com";
-		$subject = "Notificación de solicitud";
+		$subject = "Eskaera-jakinarazpena / Notificación de solicitud";
 
 		$message = "
 		<html>
 		<head>
-		<title>Se ha registrado una nueva solicitud</title>
+		<title>Eskaera berriko abisua! / ¡Aviso de nueva solicitud!</title>
 		</head>
 		<body>
-		<h3>Link a la solicitud: </h3>
-		<h2><a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>Aquí</a></h2>
+		[EU]<br/>
+		Eskaera berria erregistratu da. Hura lor dezakezu <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>hemen</a> sakatuz.<br/>
+		<br/>
+		----------------------------------------------------------<br/>
+		<br/>
+		[ES]<br/>
+		Se ha registrado una nueva solicitud. Puedes acceder a ella pulsando <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>aquí</a>.<br/>
 		</body>
 		</html>
 		";
@@ -28,16 +33,18 @@
 
 
 		$to = "julen.miner@magnasis.com";
-		$subject = "Confirmación de solicitud";
+		$subject = "Eskaera berriaren berrespena / Confirmación de nueva solicitud";
 
 		$message = "
 		<html>
-		<head>
-		<title>Se ha registrado correctamente tu solicitud</title>
-		</head>
 		<body>
-		<h3>Link a la solicitud: </h3>
-		<h2><a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>Aquí</a></h2>
+		[EU]<br/>
+		Zure eskaera zuzenki erregistratu da. Bere egoera ikuska dezakezu <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>hemen</a> sakatuz.<br/>
+		<br/>
+		----------------------------------------------------------<br/>
+		<br/>
+		[ES]<br/>
+		Tu solicitud se ha registrado correctamente. Puedes revisar su estado pulsando <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>aquí</a>.<br/>
 		</body>
 		</html>
 		";

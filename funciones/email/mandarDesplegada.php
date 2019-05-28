@@ -6,17 +6,20 @@
 
 
 		$to = $email;
-		$subject = "Notificación de solicitud desplegada";
+		$subject = "Zabaldutako eskaera jakinarazpena / Notificación de solicitud desplegada";
 
 		$message = "
 		<html>
-		<head>
-		<title>Se ha desplegado tu solicitud</title>
-		</head>
 		<body>
-		<h3>Tu solicitud o una de tus solicitudes ha sido desplegada.</h3>
-		<h2>Para conocer más sobre el estado de tu solicitud, pulsa:
-		<a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>Aquí</a></h2>
+		[EU]<br/>
+		Zure eskaera edo zure eskaeretako bat zabaldu da.<br/>
+		Bere egoera ikuska dezakezu <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>hemen</a> sakatuz.<br/>
+		<br/>
+		----------------------------------------------------------<br/>
+		<br/>
+		[ES]<br/>
+		Tu solicitud o una de tus solicitudes ha sido desplegada.<br/>
+		Puedes revisar su estado pulsando <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>aquí</a>.<br/>
 		</body>
 		</html>
 		";

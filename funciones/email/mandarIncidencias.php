@@ -5,16 +5,21 @@
         include_once $path . '/wp-load.php';
 
 		$to = "enyamanina@gmail.com";
-		$subject = "Notificación de incidencia";
+		$subject = "Intzidentzia-jakinarazpena / Notificación de incidencia";
 
 		$message = "
 		<html>
 		<head>
-		<title>Se ha registrado una nueva incidencia</title>
+		<title>Intzidentzia berriko abisua! / ¡Aviso de nueva incidencia!</title>
 		</head>
 		<body>
-		<h3>Link a la incidencia: </h3>
-		<h2><a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>Aquí</a></h2>
+		[EU]<br/>
+		Intzidentzia berria erregistratu da. Hura lor dezakezu <a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>hemen</a> sakatuz.<br/>
+		<br/>
+		----------------------------------------------------------<br/>
+		<br/>
+		[ES]<br/>
+		Se ha registrado una nueva incidencia. Puedes acceder a ella pulsando <a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>aquí</a>.<br/>
 		</body>
 		</html>
 		";
@@ -28,16 +33,18 @@
 
 
 		$to = $email;
-		$subject = "Confirmación de incidencia";
+		$subject = "Intzidentziaren berrespena / Confirmación de incidencia";
 
 		$message = "
 		<html>
-		<head>
-		<title>Se ha registrado correctamente tu incidencia</title>
-		</head>
 		<body>
-		<h3>Link a la incidencia: </h3>
-		<h2><a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>Aquí</a></h2>
+		[EU]<br/>
+		Zure intzidentzia zuzenki erregistratu da. Bere egoera ikuska dezakezu <a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>hemen</a> sakatuz.<br/>
+		<br/>
+		----------------------------------------------------------<br/>
+		<br/>
+		[ES]<br/>
+		Tu incidencia se ha registrado correctamente. Puedes revisar su estado pulsando <a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>aquí</a>.<br/>
 		</body>
 		</html>
 		";

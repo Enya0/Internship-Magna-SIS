@@ -6,18 +6,25 @@
 
 
         $to = "julen.miner@magnasis.com";
-		$subject = "Notificación de solicitud reabierta";
+		$subject = "Berriro zabaldutako eskaera jakinarazpena / Notificación de solicitud reabierta";
 
 		$message = "
 		<html>
 		<head>
-		<title>Se ha reabierto una solicitud</title>
+		<title>Berriro zabaldutako eskaera abisua! / ¡Aviso de solicitud reabierta!</title>
 		</head>
 		<body>
-		<h3>Una solicitud ha sido reabierta por el siguiente motivo: </h3>
-		<h4>$motivo</h4>
-		<h2>Si quieres cambiar el estado, pulsa:
-		<a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>Aquí</a></h2>
+		[EU] <br/>
+		Hurrengo arrazoiagatik eskaera bat berriro zabaldu da:<br/>
+		$motivo <br/>
+		Bere egoera ikuska dezakezu <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>hemen</a> sakatuz.<br/>
+		<br/>
+		----------------------------------------------------------<br/>
+		<br/>
+		[ES]<br/>
+		Una solicitud ha sido reabierta por el siguiente motivo:<br/>
+		$motivo <br/>
+		Puedes revisar su estado pulsando <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>aquí</a>.<br/>
 		</body>
 		</html>
 		";
