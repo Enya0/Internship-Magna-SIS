@@ -598,6 +598,30 @@ function obtenerTraduccion($str)
             }
             break;
 
+        case 'verSolicitudes':
+            if ($idioma == $euskera) {
+                return "Eskaerak ikusi";
+            } else {
+                return "Ver solicitudes";
+            }
+            break;
+
+        case 'verIncidencias':
+            if ($idioma == $euskera) {
+                return "Intzidentziak ikusi";
+            } else {
+                return "Ver incidencias";
+            }
+            break;
+
+        case 'ver':
+            if ($idioma == $euskera) {
+                return "Ikusi";
+            } else {
+                return "Ver";
+            }
+            break;
+
     }
 }
 

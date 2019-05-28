@@ -24,6 +24,27 @@ function configuraciones(){
             echo '
             </td>
             </tr>
+            <tr>
+            <td>'.obtenerTraduccion('laboratorios').'</td>
+            <td width="70%">';
+            echo '<a href="/ver-hw-laboratorios">'.obtenerTraduccion('ver').'</a>';
+            echo '
+            </td>
+            </tr>
+            <tr>
+            <td>'.obtenerTraduccion('verSolicitudes').'</td>
+            <td width="70%">';
+            echo '<a href="/ver-solicitudes">'.obtenerTraduccion('ver').'</a>';
+            echo '
+            </td>
+            </tr>
+            <tr>
+            <td>'.obtenerTraduccion('verIncidencias').'</td>
+            <td width="70%">';
+            echo '<a href="/ver-incidencias">'.obtenerTraduccion('ver').'</a>';
+            echo '
+            </td>
+            </tr>
             </table>';
 
             echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
