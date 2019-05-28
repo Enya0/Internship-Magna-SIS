@@ -133,8 +133,8 @@ function form_solicitud(){
                                 <select name="asig">';
 
                         if(isset($_GET['asig'])){
-                            $id = $_GET['asig'];
-                            foreach ($results as $result) {
+                                $id = $_GET['asig'];
+                                foreach ($results as $result) {
                                 if($result->id == $id){
                                     if ($idioma == $euskera) {
                                         echo '<option value="' . $result->id . '" selected>' . $result->nombre_eus . '</option>';

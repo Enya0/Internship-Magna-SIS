@@ -246,6 +246,14 @@ function obtenerTraduccion($str)
             }
             break;
 
+        case 'softwareOK':
+            if ($idioma == $euskera) {
+                return "Arrakastarekin erregistratu da software-a.";
+            } else {
+                return "Software insertado con éxito.";
+            }
+            break;
+
         case 'asignaturaOK':
             if ($idioma == $euskera) {
                 return "Arrakastarekin erregistratutako irakasgaia.";
