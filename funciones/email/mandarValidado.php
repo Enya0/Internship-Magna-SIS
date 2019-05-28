@@ -6,17 +6,20 @@
 
 
 		$to = $email;
-		$subject = "Notificación de solicitud validada";
+		$subject = "Baliozkotutako eskaera jakinarazpena / Notificación de solicitud validada";
 
 		$message = "
 		<html>
-		<head>
-		<title>Se ha validado tu solicitud</title>
-		</head>
 		<body>
-		<h3>Tu solicitud o una de tus solicitudes ha sido validada.</h3>
-		<h2>Para conocer más sobre el estado de tu solicitud, pulsa:
-		<a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>Aquí</a></h2>
+		[EU]<br/>
+		Zure eskaera edo zure eskaeretako bat balioztatu da.<br/>
+		Bere egoera ikuska dezakezu <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>hemen</a> sakatuz.<br/>
+		<br/>
+		----------------------------------------------------------<br/>
+		<br/>
+		[ES]<br/>
+		Tu solicitud o una de tus solicitudes ha sido validada.<br/>
+		Puedes revisar su estado pulsando <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>aquí</a>.<br/>
 		</body>
 		</html>
 		";
