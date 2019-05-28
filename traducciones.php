@@ -653,6 +653,14 @@ function obtenerTraduccion($str)
                 return "Editar software";
             }
             break;
+
+        case 'softwareEditadoOK':
+            if ($idioma == $euskera) {
+                return "Software-a editatu da";
+            } else {
+                return "El software se ha editado";
+            }
+            break;
     }
 }
 

@@ -35,7 +35,7 @@ if ((isset($_POST['nombre']) && isset($_POST['version']) && isset($_POST['notas'
     foreach ($aulas as $aula){
         $wpdb->insert($wpdb->prefix . 'software_aula_solicitudes',array('id_aula'=>$aula, 'id_software'=>$id_software),array('%s', '%s'));
     }
-    $msg = obtenerTraduccion("softwareOK");
+    $msg = obtenerTraduccion("softwareEditadoOK");
     $return = array('status'=>1, 'msg'=>$msg);
     echo json_encode($return);
 }else{
