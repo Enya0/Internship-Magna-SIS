@@ -4,7 +4,7 @@
         $path = $_SERVER['DOCUMENT_ROOT'];
         include_once $path . '/wp-load.php';
 
-		$to = "enyamanina@gmail.com";
+		$to = "dif.informatika-lab.teknikaria@ehu.eus";
 		$subject = "Intzidentzia-jakinarazpena / Notificación de incidencia";
 
 		$message = "

@@ -5,7 +5,7 @@
         include_once $path . '/wp-load.php';
 
 
-        $to = "julen.miner@magnasis.com";
+        $to = "dif.informatika-lab.teknikaria@ehu.eus";
 		$subject = "Berriro zabaldutako eskaera jakinarazpena / Notificación de solicitud reabierta";
 
 		$message = "
