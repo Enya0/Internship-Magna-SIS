@@ -4,7 +4,7 @@
         $path = $_SERVER['DOCUMENT_ROOT'];
         include_once $path . '/wp-load.php';
 
-		$to = "enyamanina@gmail.com";
+		$to = "dif.informatika-lab.teknikaria@ehu.eus";
 		$subject = "Eskaera-jakinarazpena / Notificación de solicitud";
 
 		$message = "
@@ -32,7 +32,7 @@
 		mail($to,$subject,$message,$headers);
 
 
-		$to = "julen.miner@magnasis.com";
+		$to = $email;
 		$subject = "Eskaera berriaren berrespena / Confirmación de nueva solicitud";
 
 		$message = "
