@@ -31,12 +31,14 @@
                         '.obtenerTraduccion("nombrePrograma").'*: 
                     </td>
                     <td width="70%">
-                        <input type="text" id="programa'.$i.'" name="programa'.$i.'" class="texto-form">
+                        <input type="text" id="programa'.$i.'" name="programa'.$i.'" class="texto-form" onchange="cambiarNotas('.$i.')" onkeyup="cambiarNotas('.$i.')">
                     </td>
                 </tr>
                 <tr>
                     <td>
+                    <p id="pVersion'.$i.'">
                         '.obtenerTraduccion("version").'*: 
+                    </p>
                     </td>
                     <td>
                         <input type="text" id="version'.$i.'" name="version'.$i.'" class="texto-form">
@@ -70,6 +72,17 @@
                     <script type="text/javascript">
                     function volver(){
                         window.location.href = "/solicitud?asig=' . $asignatura . '&sistOp=' .implode(",",$sistemaOperativo). '&nSoftware=' .$nSoftware. '";
+                    }
+                    function cambiarNotas(num){
+                        var programa = $("#programa"+num).val();
+                        console.log(programa);
+                        if(programa.toLowerCase() == "matlab"){
+                          $("#pVersion" + num).html("Toolbox*:");  
+                        }else if(programa.toLowerCase() == "eclipse"){
+                          $("#pVersion" + num).html("Plugins*:");  
+                        }else{
+                           $("#pVersion" + num).html("'.obtenerTraduccion("version").'*:");  
+                        }
                     }
                     </script>';
         $return = array('status'=>1, 'msg'=>$msg);
