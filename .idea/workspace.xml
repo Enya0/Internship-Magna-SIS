@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9906f13-504d-4a01-9d07-0af1f34b4826" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/editarSoftware.php" beforeDir="false" afterPath="$PROJECT_DIR$/editarSoftware.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/funciones/editarSoftware.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/editarSoftware.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/funciones/insertarSoftware.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/insertarSoftware.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.php" beforeDir="false" afterPath="$PROJECT_DIR$/software.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traducciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/traducciones.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/funciones/insertarSoftware.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="315">
+              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -34,7 +30,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/funciones/editarSoftware.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
@@ -151,8 +147,8 @@
         <option value="$PROJECT_DIR$/traducciones.php" />
         <option value="$PROJECT_DIR$/software.php" />
         <option value="$PROJECT_DIR$/editarSoftware.php" />
-        <option value="$PROJECT_DIR$/funciones/insertarSoftware.php" />
         <option value="$PROJECT_DIR$/funciones/editarSoftware.php" />
+        <option value="$PROJECT_DIR$/funciones/insertarSoftware.php" />
       </list>
     </option>
   </component>
@@ -248,12 +244,12 @@
       <workItem from="1558685109874" duration="7000" />
       <workItem from="1559028314769" duration="18045000" />
       <workItem from="1559120810010" duration="1363000" />
-      <workItem from="1559551202141" duration="668000" />
+      <workItem from="1559551202141" duration="1103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68020000" />
+    <option name="totallyTimeSpent" value="68455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -465,16 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/funciones/solicitud/repetirSolicitud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#input#3;n#form#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/funciones/incidencia/cerrarIncidencia.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -605,17 +591,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/funciones/insertarSoftware.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/funciones/editarSoftware.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funciones/solicitud/repetirSolicitud.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#input#3;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funciones/insertarSoftware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
         </state>
       </provider>
     </entry>

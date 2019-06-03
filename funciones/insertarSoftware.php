@@ -14,8 +14,17 @@ if ((isset($_POST['nombre']) && isset($_POST['version']) && isset($_POST['notas'
     $aulas = $_POST['aulas'];
 
     global $wpdb;
-    $wpdb->insert($wpdb->prefix . 'software_solicitudes',array('nombre'=>$nombre, 'version'=>$version, 'notas'=>$notas),array('%s', '%s', '%s'));
-    $softwareID = $wpdb->insert_id;
+    $results_sw = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'software_solicitudes WHERE nombre=\''.$nombre.'\' AND version=\''.$version.'\'');
+    $exists = 0;
+    $softwareID = 0;
+    foreach ($results_sw as $result){
+        $exists = 1;
+        $softwareID = $result->id;
+    }
+    if($exists == 0) {
+        $wpdb->insert($wpdb->prefix . 'software_solicitudes', array('nombre' => $nombre, 'version' => $version, 'notas' => $notas), array('%s', '%s', '%s'));
+        $softwareID = $wpdb->insert_id;
+    }
 
     foreach ($sistOp as $sist){
         $wpdb->insert($wpdb->prefix . 'software_so_solicitudes',array('id_so'=>$sist, 'id_software'=>$softwareID),array('%s', '%s'));
