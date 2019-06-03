@@ -22,7 +22,7 @@ function software(){
                 $idioma = get_locale();
                 $euskera = 'eu';
                 global $wpdb;
-
+                echo '<table><tr><td>'.$nombre.'</td></tr><tr><td>'.$version.'</td></tr><tr><td>'.$notas.'</td></tr></table>';
                 $results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'aula_solicitudes');
                 echo '<table bgcolor="#FFFFFF"><tr><td>'. obtenerTraduccion('nombreLabAula') .'</td>';
                 echo '<td width="70%">';

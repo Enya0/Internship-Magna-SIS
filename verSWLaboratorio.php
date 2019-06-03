@@ -22,26 +22,23 @@ function ver_sw_laboratorio(){
 
     echo obtenerTraduccion("sistemaOperativo") . ': &nbsp;&nbsp;&nbsp;';
 
-    echo ' <select id="id_so" onchange="cargarSW()"><option value="0"></option>';
 
 
     foreach ($results as $result) {
-        echo '<option value="' . $result->id . '">' . $result->nombre . '</option>';
+        echo '<button onclick="cargarSW('.$result->id .')">' . $result->nombre . '</button>&nbsp;&nbsp;';
     }
 
-    echo '</select>
-
+    echo '<br/><br/>
             <div id="sw"></div>
             
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
             <script type="text/javascript">
 
-                function cargarSW(){
+                function cargarSW(id_so){
                     var formData = new FormData();
-                    var selectedId = $("#id_so").children("option:selected").val();
 
                     formData.append("lab", '.$id_lab.');
-                    formData.append("so", selectedId);
+                    formData.append("so", id_so);
                     
                     
                     $.ajax({
@@ -62,6 +59,7 @@ function ver_sw_laboratorio(){
                         }
                     );
                 }
+                cargarSW(1);
             </script>';
 
 }
