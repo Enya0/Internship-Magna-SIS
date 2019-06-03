@@ -20,7 +20,7 @@ if(isset($_POST['lab']) && isset($_POST['so'])){
         $results_so = $wpdb->get_results('SELECT id_software FROM ' . $wpdb->prefix . 'software_so_solicitudes WHERE id_software=' . $id_software .' AND id_so='. $id_so);
 
         foreach ($results_so as $result_so){
-            $softwares = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'software_solicitudes WHERE id=' . $id_software);
+            $softwares = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'software_solicitudes WHERE id=' . $id_software .' ORDER BY nombre ASC');
             foreach ($softwares as $software) {
                 echo '<tr>';
                 echo '<td>';
