@@ -21,8 +21,15 @@ if ((isset($_POST['nombre']) && isset($_POST['version']) && isset($_POST['notas'
         $wpdb->insert($wpdb->prefix . 'software_so_solicitudes',array('id_so'=>$sist, 'id_software'=>$softwareID),array('%s', '%s'));
     }
 
-    foreach ($aulas as $aula){
-        $wpdb->insert($wpdb->prefix . 'software_aula_solicitudes',array('id_aula'=>$aula, 'id_software'=>$softwareID),array('%s', '%s'));
+    if(in_array(0, $aulas)){
+        $results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'aula_solicitudes');
+        $aulas = [];
+        foreach ($results as $result){
+            array_push($aulas, $result->id);
+        }
+    }
+    foreach ($aulas as $aula) {
+        $wpdb->insert($wpdb->prefix . 'software_aula_solicitudes', array('id_aula' => $aula, 'id_software' => $softwareID), array('%s', '%s'));
     }
     $msg = obtenerTraduccion("softwareOK");
     $return = array('status'=>1, 'msg'=>$msg);

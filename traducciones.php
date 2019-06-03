@@ -661,6 +661,14 @@ function obtenerTraduccion($str)
                 return "El software se ha editado";
             }
             break;
+
+        case 'todasLasAulas':
+            if ($idioma == $euskera) {
+                return "Gela guztiak";
+            } else {
+                return "Todas las aulas";
+            }
+            break;
     }
 }
 

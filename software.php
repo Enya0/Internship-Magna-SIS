@@ -26,6 +26,8 @@ function software(){
                 $results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'aula_solicitudes');
                 echo '<table bgcolor="#FFFFFF"><tr><td>'. obtenerTraduccion('nombreLabAula') .'</td>';
                 echo '<td width="70%">';
+                echo '<input type="checkbox" name="aulas[]" value="0">&nbsp;' . obtenerTraduccion("todasLasAulas") . '</imput><br/>';
+
                 foreach ($results as $result){
                     if ($idioma == $euskera) {
                         echo '<input type="checkbox" name="aulas[]" value="' . $result->id . '">&nbsp;' . $result->nombre . '</imput><br/>';

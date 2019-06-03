@@ -70,7 +70,7 @@ function editar_software(){
                     array_push($aulas, $resultAU_SW->id_aula);
                 }
                 $resultsAU = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'aula_solicitudes');
-
+                echo '<input type="checkbox" name="aulas[]" value="0">&nbsp;' . obtenerTraduccion("todasLasAulas") . '</imput><br/>';
                 foreach ($resultsAU as $resultAU) {
                     if(in_array($resultAU->id, $aulas)){
                         echo '<input type="checkbox" name="aulas[]" value="' . $resultAU->id . '" checked>&nbsp;' . $resultAU->nombre . '</imput><br/>';

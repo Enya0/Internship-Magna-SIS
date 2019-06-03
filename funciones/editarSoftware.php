@@ -31,7 +31,13 @@ if ((isset($_POST['nombre']) && isset($_POST['version']) && isset($_POST['notas'
     }
 
     $wpdb->delete($wpdb->prefix . 'software_aula_solicitudes', array( 'id_software' => $id_software ), array( '%d' ) );
-
+    if(in_array(0, $aulas)){
+        $results = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'aula_solicitudes');
+        $aulas = [];
+        foreach ($results as $result){
+            array_push($aulas, $result->id);
+        }
+    }
     foreach ($aulas as $aula){
         $wpdb->insert($wpdb->prefix . 'software_aula_solicitudes',array('id_aula'=>$aula, 'id_software'=>$id_software),array('%s', '%s'));
     }
