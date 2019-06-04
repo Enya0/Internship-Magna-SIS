@@ -14,12 +14,12 @@
 		</head>
 		<body>
 		[EU]<br/>
-		Intzidentzia berria erregistratu da. Hura lor dezakezu <a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>hemen</a> sakatuz.<br/>
+		Intzidentzia berria erregistratu da (id $id). Hura lor dezakezu <a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>hemen</a> sakatuz.<br/>
 		<br/>
 		----------------------------------------------------------<br/>
 		<br/>
 		[ES]<br/>
-		Se ha registrado una nueva incidencia. Puedes acceder a ella pulsando <a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>aquí</a>.<br/>
+		Se ha registrado una nueva incidencia (id $id). Puedes acceder a ella pulsando <a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>aquí</a>.<br/>
 		</body>
 		</html>
 		";

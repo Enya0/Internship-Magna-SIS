@@ -14,12 +14,12 @@
 		</head>
 		<body>
 		[EU]<br/>
-		Eskaera berria erregistratu da. Hura lor dezakezu <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>hemen</a> sakatuz.<br/>
+		Eskaera berria erregistratu da (id $id). Hura lor dezakezu <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>hemen</a> sakatuz.<br/>
 		<br/>
 		----------------------------------------------------------<br/>
 		<br/>
 		[ES]<br/>
-		Se ha registrado una nueva solicitud. Puedes acceder a ella pulsando <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>aquí</a>.<br/>
+		Se ha registrado una nueva solicitud (id $id). Puedes acceder a ella pulsando <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>aquí</a>.<br/>
 		</body>
 		</html>
 		";
