@@ -119,7 +119,7 @@ function form_solicitud(){
             foreach($resultsopen as $resultabierto) {
 
                 if($resultabierto->abierto == 1) {
-                    $results = $wpdb->get_results('SELECT id, nombre, nombre_eus FROM ' . $wpdb->prefix . 'asignatura_solicitudes');
+                    $results = $wpdb->get_results('SELECT id, nombre, nombre_eus FROM ' . $wpdb->prefix . 'asignatura_solicitudes ORDER BY nombre ASC');
                     $resultsSO = $wpdb->get_results('SELECT id, nombre FROM ' . $wpdb->prefix . 'so_solicitudes');
                     echo '<div id="formulario"><form id="fsolicitud" name="fsolicitud" action="" method="post" enctype="multipart/form-data">
                     <input type="text" value="' . $current_user->user_email . '" name="email" style="visibility: hidden;"/>
