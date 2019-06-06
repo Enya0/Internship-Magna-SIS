@@ -39,12 +39,12 @@
 		<html>
 		<body>
 		[EU]<br/>
-		Zure eskaera zuzenki erregistratu da. Bere egoera ikuska dezakezu <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>hemen</a> sakatuz.<br/>
+		Zure eskaera zuzenki erregistratu da (id $id). Bere egoera ikuska dezakezu <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>hemen</a> sakatuz.<br/>
 		<br/>
 		----------------------------------------------------------<br/>
 		<br/>
 		[ES]<br/>
-		Tu solicitud se ha registrado correctamente. Puedes revisar su estado pulsando <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>aquí</a>.<br/>
+		Tu solicitud se ha registrado correctamente (id $id). Puedes revisar su estado pulsando <a href='".get_home_url()."/solicitud?id=".$id."' id='solicitud'>aquí</a>.<br/>
 		</body>
 		</html>
 		";

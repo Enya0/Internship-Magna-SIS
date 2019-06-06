@@ -39,12 +39,12 @@
 		<html>
 		<body>
 		[EU]<br/>
-		Zure intzidentzia zuzenki erregistratu da. Bere egoera ikuska dezakezu <a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>hemen</a> sakatuz.<br/>
+		Zure intzidentzia zuzenki erregistratu da (id $id). Bere egoera ikuska dezakezu <a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>hemen</a> sakatuz.<br/>
 		<br/>
 		----------------------------------------------------------<br/>
 		<br/>
 		[ES]<br/>
-		Tu incidencia se ha registrado correctamente. Puedes revisar su estado pulsando <a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>aquí</a>.<br/>
+		Tu incidencia se ha registrado correctamente (id $id). Puedes revisar su estado pulsando <a href='".get_home_url()."/incidencia?id=".$id."' id='incidencia'>aquí</a>.<br/>
 		</body>
 		</html>
 		";
